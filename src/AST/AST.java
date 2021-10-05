@@ -12,7 +12,7 @@ public class AST {
 
 
     public AST(int value) {
-
+        System.out.println("Test");
     }
 
 

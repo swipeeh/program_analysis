@@ -1,12 +1,17 @@
 package AST;
 
+import java.util.ArrayList;
+
 public class AST {
 
-    // This class should define the AST.AST structure  so that we can at least perform some operations on it.
-    // Some find it easier to implement the AST.AST data structure first, then work on the parser afterwards.
+    private int value;
+    private AST leftNode;
+    private AST rightNode;
+    private ArrayList<AST> children = new ArrayList<>();
+    private AST parent = null;
 
-    // Constructor
-    public AST() {
+
+    public AST(int value) {
 
     }
 

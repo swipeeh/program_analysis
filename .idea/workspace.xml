@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb4ed807-37c2-4903-801c-1afa78b54538" name="Changes" comment="Deleted a class and added one for defining the AST data structure" />
+    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="structure">
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/Integer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/expressions/Integer.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,14 +12,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1yPCvs2v9F5Op3MFHpXmRS3FNvk" />
+  <component name="ProjectId" id="1z6CpLRahDUPhEgmeNxpBBDXFKt" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,72 +33,63 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
-  </component>
-  <component name="RunManager" selected="Application.Tokenizer">
-    <configuration name="AnalysisModule" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AnalysisModule" />
-      <module name="program_analysis" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tokenizer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Tokenizer" />
-      <module name="program_analysis" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Tokenizer" />
-        <item itemvalue="Application.AnalysisModule" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cb4ed807-37c2-4903-801c-1afa78b54538" name="Changes" comment="" />
-      <created>1632144071923</created>
+      <changelist id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="" />
+      <created>1633459333641</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1632144071923</updated>
+      <updated>1633459333641</updated>
+      <workItem from="1633459335081" duration="3871000" />
     </task>
-    <task id="LOCAL-00001" summary="Test">
-      <created>1632145673659</created>
+    <task id="LOCAL-00001" summary="Initial structure + declaration of program graph sub classes">
+      <created>1633460403155</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1632145673659</updated>
+      <updated>1633460403155</updated>
     </task>
-    <task id="LOCAL-00002" summary="Test 2">
-      <created>1632162462423</created>
+    <task id="LOCAL-00002" summary="control flow class">
+      <created>1633460962313</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1632162462423</updated>
+      <updated>1633460962313</updated>
     </task>
-    <task id="LOCAL-00003" summary="Added two additonal classes, one for tokenization of input and another for parsing the tokens to AST">
-      <created>1632481372039</created>
+    <task id="LOCAL-00003" summary="AST needs to be implemented before we can continue with #controlFlow class.">
+      <created>1633461429998</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1632481372039</updated>
+      <updated>1633461429998</updated>
     </task>
-    <task id="LOCAL-00004" summary="Deleted a class and added one for defining the AST data structure">
-      <created>1632827163748</created>
+    <task id="LOCAL-00004" summary="first attempts on ASTs">
+      <created>1633462477197</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1632827163748</updated>
+      <updated>1633462477197</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="structure">
+      <created>1633463053573</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1633463053573</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -102,13 +101,13 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test" />
-    <MESSAGE value="Test 2" />
-    <MESSAGE value="Added two additonal classes, one for tokenization of input and another for parsing the tokens to AST" />
-    <MESSAGE value="Deleted a class and added one for defining the AST data structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted a class and added one for defining the AST data structure" />
+    <MESSAGE value="Initial structure + declaration of program graph sub classes" />
+    <MESSAGE value="control flow class" />
+    <MESSAGE value="AST needs to be implemented before we can continue with #controlFlow class." />
+    <MESSAGE value="first attempts on ASTs" />
+    <MESSAGE value="structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="structure" />
   </component>
 </project>

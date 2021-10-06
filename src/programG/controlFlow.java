@@ -29,7 +29,7 @@ public class controlFlow {
     }
     public void print(){
         for(Edges edges : this.edgesList){
-            System.out.println(edges.getBeginNode().getId() + "/n" + edges.getEndNode().getId());
+            //System.out.println(edges.getBeginNode().getId() + "/n" + edges.getEndNode().getId());
         }
     }
 }

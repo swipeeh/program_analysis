@@ -1,48 +1,52 @@
 package AST;
 
 import java.util.ArrayList;
+import AST.Node;
 
 
-
-
+// Data structure for the abstract syntax tree
 public class AST {
 
-    private int nodeData;
-    private AST leftNode;
-    private AST rightNode;
-    private ArrayList<AST> children = new ArrayList<>();
-    private AST parent = null;
+    Node root;
 
-
-    public AST(int nodeData) {
-        this.nodeData = nodeData;
+    public AST(String nodeValue, String nodeType) {
+        root = new Node(nodeValue, nodeType);
     }
 
-    // Adds child to parent node and adds it to the list of children
-    public AST addChild(AST child) {
-         child.setParent(this);
-         this.children.add(child);
-         return child;
+    // If no value is passed when creating new node, root is set to null
+    public AST() {
+        root = null;
     }
 
-    private void setParent(AST parent) {
-        this.parent = parent;
+    // Driver code
+    public static void main(String[] args) {
+        AST tree = new AST();
+
+        // Creating the AST for the expression 1 + 2 * 3
+        // OBS: When we create the parser, we need to consider precedence of operators, i.e. * and / have precedence over + and -
+        // In order to encode the operator precedence in an AST, we need to put what has precedence lower in the tree.
+
+     /*   For instance, consider the following representation of the above expression, which says that * has precedence over +.
+          When reading the tree later on, we need to implement a visit() method doing postorder traversal, which means it starts from the bottom up
+          which means we read the expression in the correct way and with correct precedence
+
+            +
+           / \
+          1   *
+             / \
+            2   3
+     */
+        tree.root = new Node("+", "operator");
+        tree.root.leftNode = new Node("1", "numberLiteral");
+        tree.root.rightNode = new Node("*", "operator");
+        tree.root.rightNode.leftNode = new Node("2", "numberLiteral");
+        tree.root.rightNode.rightNode = new Node("3", "numberLiteral");
+
+
+
     }
 
-    // Returns parent of the current node from which it is called
-    private AST getParent() {
-        return parent;
-    }
 
-    // Returns value of the node from which it is called
-    public int getNodeData() {
-        return nodeData;
-    }
-
-    // Sets value of node
-    public void setNodeData(int data) {
-        this.nodeData = data;
-    }
 
 
 

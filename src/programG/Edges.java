@@ -1,6 +1,7 @@
 package programG;
 
-import javax.xml.soap.Node;
+
+import org.w3c.dom.Node;
 
 public class Edges {
 

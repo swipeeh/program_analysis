@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import AST.Node;
 
 
-// Data structure for the abstract syntax tree
 public class AST {
 
-    Node root;
+    private Node root;
 
     public AST(String nodeValue, String nodeType) {
         root = new Node(nodeValue, nodeType);
@@ -24,7 +23,7 @@ public class AST {
 
         // Creating the AST for the expression 1 + 2 * 3
         // OBS: When we create the parser, we need to consider precedence of operators, i.e. * and / have precedence over + and -
-        // In order to encode the operator precedence in an AST, we need to put what has precedence lower in the tree.
+        // In order to encode the operator precedence in an AST, we need to put what has higher precedence lower in the tree.
 
      /*   For instance, consider the following representation of the above expression, which says that * has precedence over +.
           When reading the tree later on, we need to implement a visit() method doing postorder traversal, which means it starts from the bottom up

@@ -3,6 +3,7 @@ package AST;
 public class Node {
 
     // Node data structure used to represent the nodes of the AST's
+    // Consider moving it to AST.java as an inner class
 
     private String nodeValue;
     private String nodeType;

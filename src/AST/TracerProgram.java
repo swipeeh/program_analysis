@@ -1,12 +1,13 @@
 package AST;
 
 import AST.declaration.Declaration;
+import AST.statements.Statements;
 
 public class TracerProgram {
     private Declaration declaration;
-    private Statement statement;
+    private Statements statement;
 
-    public TracerProgram(Declaration decl, Statement stat){
+    public TracerProgram(Declaration decl, Statements stat){
         this.declaration = decl;
         this.statement = stat;
     }
@@ -15,7 +16,7 @@ public class TracerProgram {
         return this.declaration;
     }
 
-    public Statement getStatement(){
+    public Statements getStatement(){
         return this.statement;
     }
 }

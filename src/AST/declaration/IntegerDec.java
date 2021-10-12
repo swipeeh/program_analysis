@@ -1,5 +1,8 @@
 package AST.declaration;
 
+import AST.expressions.aexpressions.aExpressions;
+import AST.expressions.lexpressions.lExpressions;
+
 public class IntegerDec extends Declaration{
 
     private String id;
@@ -12,6 +15,32 @@ public class IntegerDec extends Declaration{
         return id;
     }
 
+
+    @Override
+    public String getidentifier() {
+        return null;
+    }
+
+    @Override
+    public aExpressions getAExpression1() {
+        return null;
+    }
+
+    @Override
+    public aExpressions getAExpression2() {
+        return null;
+    }
+
+    @Override
+    public lExpressions getLExpression() {
+        return null;
+    }
+
+    @Override
+    public Integer getSize() {
+        return null;
+    }
+
     @Override
     public Declaration getFirstDec() {
         return null;
@@ -19,26 +48,6 @@ public class IntegerDec extends Declaration{
 
     @Override
     public Declaration getSecondDec() {
-        return null;
-    }
-
-    @java.lang.Override
-    public integer getSize() {
-        return null;
-    }
-
-    @java.lang.Override
-    public string getIdentity() {
-        return null;
-    }
-
-    @java.lang.Override
-    public lExpression getLExpression() {
-        return null;
-    }
-
-    @java.lang.Override
-    public aExpression getAExpression() {
         return null;
     }
 }

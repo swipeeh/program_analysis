@@ -1,5 +1,7 @@
 package AST.declaration;
-import AST.expressions.aexpressions.aExpressionManager;
+
+import AST.expressions.aexpressions.aExpressions;
+import AST.expressions.lexpressions.lExpressions;
 
 public class ArrayDec extends  Declaration {
 
@@ -7,24 +9,33 @@ public class ArrayDec extends  Declaration {
     private Integer size;
 
     public ArrayDec(String ident, Integer size){
-        this.ident = id;
+        this.ident = ident;
         this.size = size;
+    }
+
+    @Override
+    public String getidentifier() {
+        return null;
+    }
+
+    @Override
+    public aExpressions getAExpression1() {
+        return null;
+    }
+
+    @Override
+    public aExpressions getAExpression2() {
+        return null;
+    }
+
+    @Override
+    public lExpressions getLExpression() {
+        return null;
     }
 
     public Integer getSize() {
         return size;
     }
-
-    @Override
-    public string getIdentity() {
-        return this.id;
-    }
-
-    @Override
-    public lExpression getLExpression() {return null;}
-
-    @Override
-    public aExpression getAExpression() {return null;}
 
     @Override
     public Declaration getFirstDec() {

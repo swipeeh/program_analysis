@@ -2,8 +2,8 @@ package AST.expressions.aexpressions;
 
 public class aArithOperator extends aExpressions {
 
-    private aExpressions = aExpressions1;
-    private aExpressions = aExpressions2;
+    private aExpressions aExpressions1;
+    private aExpressions aExpressions2;
     private String arithOperator;
 
     public aArithOperator(aExpressions aExpr1, aExpressions aExpr2, String arithOpr){
@@ -13,10 +13,10 @@ public class aArithOperator extends aExpressions {
     }
 
     public aExpressions getaExpression1(){
-        return this.aExpression1;
+        return this.aExpressions1;
     }
     public aExpressions getaExpression2(){
-        return this.aExpression2;
+        return this.aExpressions2;
     }
     public String getArithOperator() {
         return this.arithOperator;

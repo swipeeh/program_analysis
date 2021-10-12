@@ -6,10 +6,13 @@ public class AnalysisModule {
 
     public static void main(String[] args) {
 
+
+        // Read test file
         try {
-            File myObj = new File("C:/Users/silas/Desktop/test.microc.txt");
+            File myObj = new File("src/test.microc");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
+                // For each line of the file, split it into tokens
                 String data = myReader.nextLine();
                 System.out.println(data);
             }

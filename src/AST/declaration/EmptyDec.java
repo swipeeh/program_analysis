@@ -11,4 +11,24 @@ public class EmptyDec extends Declaration {
     public Declaration getSecondDec() {
         return null;
     }
+
+    @Override
+    public integer getSize() {
+        return null;
+    }
+
+    @Override
+    public string getIdentity() {
+        return null;
+    }
+
+    @Override
+    public lExpression getLExpression() {
+        return null;
+    }
+
+    @Override
+    public aExpression getAExpression() {
+        return null;
+    }
 }

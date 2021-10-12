@@ -2,17 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="structure">
-      <change afterPath="$PROJECT_DIR$/src/AST/declaration/ArrayDec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AST/declaration/Declaration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AST/declaration/DoubleDec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AST/declaration/EmptyDec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AST/declaration/IntegerDec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AST/declaration/RecordDec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/TracerProgram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/Expressions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/aexpressions/aArithOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/aexpressions/aArrOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/aexpressions/aExpressions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/aexpressions/aFirstOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/aexpressions/aSecondOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/aexpressions/aValOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/aexpressions/aVarOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/bexpressions/bExpressions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/bexpressions/bOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/bexpressions/norOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/bexpressions/relOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/bexpressions/tfOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lArrOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lExpressions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lFirstOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lSecondOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lVarOperator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/Tokenizer$Token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/Tokenizer$TokenInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/Tokenizer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/test.microC" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/program_analysis/test.microC" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/Tracer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/Tracer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/declaration/ArrayDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/declaration/ArrayDec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/declaration/Declaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/declaration/Declaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/declaration/DoubleDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/declaration/DoubleDec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/declaration/EmptyDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/declaration/EmptyDec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/declaration/IntegerDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/declaration/IntegerDec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/declaration/RecordDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/declaration/RecordDec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/Initialization.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/Integer.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +48,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="patrik" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,10 +63,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/AST" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\patih\Desktop\Personal shit\skola\skola DTU\program analysis\program_analysis\src\AST" />
+      <recent name="C:\Users\patih\Desktop\Personal shit\skola\skola DTU\program analysis\program_analysis\src\AST\expressions\aexpressions" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -59,6 +83,9 @@
       <option name="presentableId" value="Default" />
       <updated>1633459333641</updated>
       <workItem from="1633459335081" duration="3871000" />
+      <workItem from="1633539536000" duration="2759000" />
+      <workItem from="1633691835185" duration="74000" />
+      <workItem from="1634055424781" duration="5865000" />
     </task>
     <task id="LOCAL-00001" summary="Initial structure + declaration of program graph sub classes">
       <created>1633460403155</created>

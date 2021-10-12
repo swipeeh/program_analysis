@@ -1,22 +1,30 @@
 package AST.declaration;
+import AST.expressions.aexpressions.aExpressionManager;
 
-public class ArrayDec extends Declaration {
+public class ArrayDec extends  Declaration {
 
-    private String id;
+    private String ident;
     private Integer size;
 
-    public ArrayDec(String id, Integer size){
-        this.id = id;
+    public ArrayDec(String ident, Integer size){
+        this.ident = id;
         this.size = size;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public Integer getSize() {
         return size;
     }
+
+    @Override
+    public string getIdentity() {
+        return this.id;
+    }
+
+    @Override
+    public lExpression getLExpression() {return null;}
+
+    @Override
+    public aExpression getAExpression() {return null;}
 
     @Override
     public Declaration getFirstDec() {

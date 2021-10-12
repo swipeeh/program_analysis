@@ -5,8 +5,8 @@ import AST.expressions.lexpressions.lExpressions;
 
 public interface Tracer {
     String getidentifier();
-    aExpression getAExpression1();
-    aExpression getAExpression2();
-    lExpression getLExpression();
+    aExpressions getAExpression1();
+    aExpressions getAExpression2();
+    lExpressions getLExpression();
     Integer getSize();
 }

@@ -1,12 +1,12 @@
 package AST.expressions.arrayExpressions;
 
 public class aValOperator extends aExpressions{
-    private Integer val;
+    private int val;
 
-    public aValOperator(Integer v){
+    public aValOperator(int v){
         this.val = v;
     }
-    public Integer getVal(){
+    public int getVal(){
         return this.val;
     }
 }

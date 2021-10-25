@@ -1,4 +1,4 @@
-package AST.expressions.bexpressions;
+package AST.expressions.booleanExpressions;
 
 public class norOperator extends bExpressions{
     private bExpressions blnExpressions;

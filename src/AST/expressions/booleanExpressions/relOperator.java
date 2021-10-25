@@ -1,6 +1,6 @@
-package AST.expressions.bexpressions;
+package AST.expressions.booleanExpressions;
 
-import AST.expressions.aexpressions.aExpressions;
+import AST.expressions.arrayExpressions.aExpressions;
 
 public class relOperator extends bExpressions{
 

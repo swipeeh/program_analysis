@@ -1,4 +1,4 @@
-package AST.expressions.aexpressions;
+package AST.expressions.arrayExpressions;
 
 public class aFirstOperator  extends aExpressions{
     private String identifier;

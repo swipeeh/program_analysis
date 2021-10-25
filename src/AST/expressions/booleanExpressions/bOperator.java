@@ -1,5 +1,5 @@
-package AST.expressions.bexpressions;
-import AST.expressions.aexpressions.aExpressions;
+package AST.expressions.booleanExpressions;
+import AST.expressions.arrayExpressions.aExpressions;
 
 public class bOperator extends bExpressions{
     private aExpressions aExpression1;

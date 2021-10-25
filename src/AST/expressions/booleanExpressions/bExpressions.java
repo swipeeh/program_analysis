@@ -1,4 +1,4 @@
-package AST.expressions.bexpressions;
+package AST.expressions.booleanExpressions;
 
 import AST.expressions.Expressions;
 

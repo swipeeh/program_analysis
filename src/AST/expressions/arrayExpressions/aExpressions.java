@@ -1,4 +1,4 @@
-package AST.expressions.aexpressions;
+package AST.expressions.arrayExpressions;
 
 import AST.expressions.Expressions;
 

@@ -1,4 +1,4 @@
-package AST.expressions.aexpressions;
+package AST.expressions.arrayExpressions;
 
 public class aSecondOperator extends aExpressions{
     private String identifier;

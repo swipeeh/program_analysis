@@ -1,6 +1,6 @@
 package AST;
 
-import AST.expressions.aexpressions.aExpressions;
+import AST.expressions.arrayExpressions.aExpressions;
 import AST.expressions.lexpressions.lExpressions;
 
 public interface Tracer {

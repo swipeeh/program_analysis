@@ -1,7 +1,7 @@
 package AST.statements;
 
-import AST.expressions.aexpressions.aExpressions;
-import AST.expressions.bexpressions.bExpressions;
+import AST.expressions.arrayExpressions.aExpressions;
+import AST.expressions.booleanExpressions.bExpressions;
 import AST.expressions.lexpressions.lExpressions;
 
 public class EmptyStatements extends Statements {

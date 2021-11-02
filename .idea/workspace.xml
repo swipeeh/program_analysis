@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="structure">
+      <change afterPath="$PROJECT_DIR$/src/AST/statements/IfStatements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AST/statements/WhileStatements.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/program_analysis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/program_analysis.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lArrOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lArrOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AnalysisModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnalysisModule.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +49,26 @@
       <recent name="C:\Users\patih\Desktop\Personal shit\skola\skola DTU\program analysis\program_analysis\src\AST" />
       <recent name="C:\Users\patih\Desktop\Personal shit\skola\skola DTU\program analysis\program_analysis\src\AST\expressions\aexpressions" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.AST">
+    <configuration name="AST" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="AST.AST" />
+      <module name="program_analysis" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnalysisMod" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="AnalysisModule" />
+      <module name="program_analysis" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.AnalysisMod" />
+      <item itemvalue="Application.AST" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

@@ -14,9 +14,7 @@ public class Nodes extends Declaration {
 
     public Nodes(Declaration decl, Nodes fNode, Nodes lNode) {}
 
-    public int getId(){
-        return this.position;
-    }
+    public int getId(){return this.position;}
 
     public void setId(int position){
         this.position = position;

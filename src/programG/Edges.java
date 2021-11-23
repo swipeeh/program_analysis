@@ -12,13 +12,17 @@ public class Edges {
     private Node beginNode;
     private Tracer tracer;
     private Node endNode;
+    private int position;
 
 
     public Edges(Node beginNode, Node endNode) {
         this.beginNode = beginNode;
         this.endNode = endNode;
         this.tracer = tracer;
+        this.position = position;
     }
+
+    public int getId(){return this.position;}
 
     public Edges(Declaration decl, Nodes fNode, Nodes lNode) {
 

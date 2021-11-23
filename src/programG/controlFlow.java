@@ -4,10 +4,6 @@ import java.util.ArrayList;
 import AST.TracerProgram;
 import AST.declaration.Declaration;
 import AST.statements.Statements;
-import org.w3c.dom.NodeList;
-import AST.Node;
-import programG.Edges;
-import programG.Nodes;
 import java.util.List;
 
 
@@ -106,14 +102,14 @@ public class controlFlow {
         this.nodesList.add(fNode);
         lNode = edgeDec(program.getDeclaration(), fNode, lNode);
         this.nodesList.add(lNode);
-        Node tNode = new Node(-1);
+        Nodes tNode = new Nodes(-1);
         edgesStatement(program.getStatement(), lNode, tNode);
         this.nodesList.add(tNode);
     }
 
     public void print(){
         for(Edges edges : this.edgesList){
-            System.out.println(edges.getBeginNode().getNodeName() + "/n" + edges.getEndNode().getNodeName());
+            System.out.println(edges.getBeginNode() + edges.getTracer().getClass().getName() + edges.getEndNode());
         }
     }
 }

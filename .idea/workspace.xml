@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="ControlFlow Analysis = edgeDeclaration class">
+    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="picovina jebana">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/statements/IfStatements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/statements/IfStatements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/statements/Statements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/statements/Statements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/programG/Edges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/Edges.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/programG/Nodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/Nodes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/programG/controlFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/controlFlow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637665771538</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="picovina jebana">
+      <created>1637667700920</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1637667700920</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +136,7 @@
     <MESSAGE value="first attempts on ASTs" />
     <MESSAGE value="structure" />
     <MESSAGE value="ControlFlow Analysis = edgeDeclaration class" />
-    <option name="LAST_COMMIT_MESSAGE" value="ControlFlow Analysis = edgeDeclaration class" />
+    <MESSAGE value="picovina jebana" />
+    <option name="LAST_COMMIT_MESSAGE" value="picovina jebana" />
   </component>
 </project>

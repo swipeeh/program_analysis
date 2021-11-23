@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="structure">
-      <change afterPath="$PROJECT_DIR$/src/AST/statements/IfStatements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AST/statements/WhileStatements.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lArrOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lArrOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AnalysisModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnalysisModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/AST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/AST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Analyses/Analysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyses/Analysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorklistAlgorithms/Worklist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorklistAlgorithms/Worklist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/programG/Edges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/Edges.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/programG/Nodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/Nodes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/programG/controlFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/controlFlow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,36 +43,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/AST" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\patih\Desktop\Personal shit\skola\skola DTU\program analysis\program_analysis\src\AST" />
       <recent name="C:\Users\patih\Desktop\Personal shit\skola\skola DTU\program analysis\program_analysis\src\AST\expressions\aexpressions" />
     </key>
-  </component>
-  <component name="RunManager" selected="Application.AST">
-    <configuration name="AST" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="AST.AST" />
-      <module name="program_analysis" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnalysisMod" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="AnalysisModule" />
-      <module name="program_analysis" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.AnalysisMod" />
-      <item itemvalue="Application.AST" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -82,6 +66,8 @@
       <workItem from="1633539536000" duration="2759000" />
       <workItem from="1633691835185" duration="74000" />
       <workItem from="1634055424781" duration="5865000" />
+      <workItem from="1636107732901" duration="543000" />
+      <workItem from="1637661420779" duration="4203000" />
     </task>
     <task id="LOCAL-00001" summary="Initial structure + declaration of program graph sub classes">
       <created>1633460403155</created>

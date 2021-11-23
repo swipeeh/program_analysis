@@ -1,4 +1,4 @@
-package AST;
+/*package AST;
 
 import java.util.ArrayList;
 import AST.Node;
@@ -25,7 +25,9 @@ public class AST {
         // OBS: When we create the parser, we need to consider precedence of operators, i.e. * and / have precedence over + and -
         // In order to encode the operator precedence in an AST, we need to put what has higher precedence lower in the tree.
 
-     /*   For instance, consider the following representation of the above expression, which says that * has precedence over +.
+     *//*
+*/
+/*   For instance, consider the following representation of the above expression, which says that * has precedence over +.
           When reading the tree later on, we need to implement a visit() method doing postorder traversal, which means it starts from the bottom up
           which means we read the expression in the correct way and with correct precedence
 
@@ -34,7 +36,9 @@ public class AST {
           1   *
              / \
             2   3
-     */
+     *//*
+*/
+/*
         tree.root = new Node("+", "operator");
         tree.root.leftNode = new Node("1", "numberLiteral");
         tree.root.rightNode = new Node("*", "operator");
@@ -43,7 +47,8 @@ public class AST {
 
 
 
-    }
+    }*//*
+
 
 
 
@@ -51,3 +56,4 @@ public class AST {
 
 
 }
+*/

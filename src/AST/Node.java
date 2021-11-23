@@ -1,9 +1,10 @@
+/*
 package AST;
+
+import java.util.ArrayList;
 
 public class Node {
 
-    // Node data structure used to represent the nodes of the AST's
-    // Consider moving it to AST.java as an inner class
 
     private String nodeValue;
     private String nodeType;
@@ -15,11 +16,7 @@ public class Node {
         this.leftNode = this.rightNode = null;
     }
 
-
-    // TODO: implement getters/setters for getting node data, parents etc
-
-
-/*    private int nodeData;
+    private int nodeData;
     private AST leftNode;
     private AST rightNode;
     private ArrayList<AST> children = new ArrayList<>();
@@ -54,7 +51,8 @@ public class Node {
     // Sets value of node
     public void setNodeData(int data) {
         this.nodeData = data;
-    }*/
+    }
 
 
 }
+*/

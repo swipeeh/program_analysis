@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="structure">
+    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="ControlFlow Analysis = edgeDeclaration class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/AST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/AST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Analyses/Analysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyses/Analysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorklistAlgorithms/Worklist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorklistAlgorithms/Worklist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/statements/IfStatements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/statements/IfStatements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/statements/Statements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/statements/Statements.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/programG/Edges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/Edges.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/programG/Nodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/Nodes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/programG/controlFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/controlFlow.java" afterDir="false" />
@@ -67,7 +64,7 @@
       <workItem from="1633691835185" duration="74000" />
       <workItem from="1634055424781" duration="5865000" />
       <workItem from="1636107732901" duration="543000" />
-      <workItem from="1637661420779" duration="4203000" />
+      <workItem from="1637661420779" duration="6075000" />
     </task>
     <task id="LOCAL-00001" summary="Initial structure + declaration of program graph sub classes">
       <created>1633460403155</created>
@@ -104,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633463053573</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ControlFlow Analysis = edgeDeclaration class">
+      <created>1637665771538</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1637665771538</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +132,7 @@
     <MESSAGE value="AST needs to be implemented before we can continue with #controlFlow class." />
     <MESSAGE value="first attempts on ASTs" />
     <MESSAGE value="structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="structure" />
+    <MESSAGE value="ControlFlow Analysis = edgeDeclaration class" />
+    <option name="LAST_COMMIT_MESSAGE" value="ControlFlow Analysis = edgeDeclaration class" />
   </component>
 </project>

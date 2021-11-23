@@ -3,6 +3,8 @@ package programG;
 
 import AST.Tracer;
 import AST.declaration.Declaration;
+import AST.expressions.booleanExpressions.bExpressions;
+import AST.statements.Statements;
 import org.w3c.dom.Node;
 
 public class Edges {
@@ -19,6 +21,16 @@ public class Edges {
     }
 
     public Edges(Declaration decl, Nodes fNode, Nodes lNode) {
+
+    }
+
+    public Edges(Nodes fNode, Nodes tNode, bExpressions boolExpression) {
+
+
+    }
+
+    public Edges(Statements stat, Nodes fNode, Nodes lNode) {
+
 
     }
 

@@ -16,6 +16,12 @@ public class IfStatements extends Statements {
     }
 
 
+    @Override
+    public Statements statementOne() {return this.statement;}
+
+    @Override
+    public Statements statementTwo() {return this.statement;}
+
     public bExpressions getBoolExpression() {
         return this.boolExpression;
     }

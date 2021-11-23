@@ -3,6 +3,7 @@ package programG;
 import java.util.ArrayList;
 import AST.TracerProgram;
 import AST.declaration.Declaration;
+import AST.statements.Statements;
 import org.w3c.dom.NodeList;
 import AST.Node;
 import programG.Edges;
@@ -69,16 +70,37 @@ public class controlFlow {
                     return lNode;
                 }
             }
-
-            if (decl.getClass().getName().equals("AST.declaration.EmptyDec")) {//should not retrieve anything}
+            if (decl.getClass().getName().equals("AST.declaration.EmptyDec")) {/*should not retrieve anything*/}
             }
-        }
         return null;
     }
 
 
+    public void edgesStatement(Statements stat,Nodes fNode,Nodes lNode){
+        if(stat.getClass().getName().equals("AST.Statements.AssignmentEvent")){
+            Edges tEdge = new Edges(stat, fNode, lNode);
+            this.edgesList.add(tEdge);
+        }
+        else if(stat.getClass().getName().equals("AST.Statements.EmptyStatements")){/*should not retrieve anything*/}
+        else if(stat.getClass().getName().equals("AST.Statements.IfStatements")){
+            Nodes tNode = new Nodes(fNode.getId()+1);
+            this.nodesList.add(tNode);
+            Edges tEdge = new Edges(fNode,tNode, stat.getBoolExpression());
+            this.edgesList.add(tEdge);
+            edgesStatement(stat.statementOne(),tNode,lNode);
+        }
+        else if(stat.getClass().getName().equals("AST.Statements.WhileStatements")){
+            Nodes tNode = new Nodes(fNode.getSize()+1);
+            this.nodesList.add(tNode);
+            Edges tEdge = new Edges(fNode,tNode,stat.getBoolExpression());
+            this.edgesList.add(tEdge);
+            edgesStatement(stat.statementOne(),tNode,fNode);
+        }
+    }
 
-    public void cProgramGraph(TracerProgram program) {
+
+
+    public void newProgramGraph(TracerProgram program) {
         Nodes fNode = new Nodes(0);
         Nodes lNode = new Nodes(2);
         this.nodesList.add(fNode);

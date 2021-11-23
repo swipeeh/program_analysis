@@ -22,6 +22,16 @@ public class DoubleStatements extends Statements {
         return this.statementTwo;
     }
 
+    @Override
+    public Statements statementOne() {
+        return null;
+    }
+
+    @Override
+    public Statements statementTwo() {
+        return null;
+    }
+
     public bExpressions getBoolExpression() {
         return null;
     }

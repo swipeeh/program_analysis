@@ -13,6 +13,16 @@ public class EmptyStatements extends Statements {
         return null;
     }
 
+    @Override
+    public Statements statementOne() {
+        return null;
+    }
+
+    @Override
+    public Statements statementTwo() {
+        return null;
+    }
+
     public bExpressions getBoolExpression() {
         return null;
     }

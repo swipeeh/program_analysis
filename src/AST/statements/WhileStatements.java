@@ -15,6 +15,16 @@ public class WhileStatements extends Statements {
     }
 
 
+    @Override
+    public Statements statementOne() {
+        return null;
+    }
+
+    @Override
+    public Statements statementTwo() {
+        return null;
+    }
+
     public bExpressions getBoolExpression() {
         return this.boolExpression;
     }

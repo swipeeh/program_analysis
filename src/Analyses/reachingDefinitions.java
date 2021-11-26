@@ -43,7 +43,7 @@ public class reachingDefinitions implements Analysis{
             if(!this.analysisSet.get(l).contains(aList)){this.analysisSet.get(l).add(aList);}}}
     
     public HashMap<Integer, ArrayList<Integer>> getInfl() {return this.infl;}
-    
+
     public ArrayList<ArrayList<String>> newConstraint(Integer l) {
         ArrayList<ArrayList<String>> r = new ArrayList<>();
         if(l!=0){
@@ -52,15 +52,11 @@ public class reachingDefinitions implements Analysis{
                     ArrayList<ArrayList<String>> t =
                             (ArrayList<ArrayList<String>>) analysisSet.get(e.getBeginNode().getId());
                     //t.removeAll(kill(e,analysisSet.get(e.getBeginNode().getId())));
-
-
                 }
             }
         }
         return r;
     }
-
-
 
     @Override
     public controlFlow getControlFlowAnalysis() {

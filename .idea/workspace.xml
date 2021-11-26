@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="reaching definitions (work in progress)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Analyses/reachingDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyses/reachingDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/programG/Edges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/Edges.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/programG/Nodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/Nodes.java" afterDir="false" />
-    </list>
+    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="Correct placement of classes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +44,34 @@
       <recent name="C:\Users\patih\Desktop\Personal shit\skola\skola DTU\program analysis\program_analysis\src\AST" />
       <recent name="C:\Users\patih\Desktop\Personal shit\skola\skola DTU\program analysis\program_analysis\src\AST\expressions\aexpressions" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.HardCodedParser">
+    <configuration name="HardCodedParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Parser.HardCodedParser" />
+      <module name="program_analysis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Parser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Parser" />
+      <module name="program_analysis" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HardCodedParser" />
+        <item itemvalue="Application.Parser" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -129,7 +152,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637669121469</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="rd errors resolved">
+      <created>1637921222543</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1637921222543</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Correct placement of classes">
+      <created>1637922471278</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1637922471278</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +195,8 @@
     <MESSAGE value="Control Flow analysis class finished" />
     <MESSAGE value="adding necessary methods for building project" />
     <MESSAGE value="reaching definitions (work in progress)" />
-    <option name="LAST_COMMIT_MESSAGE" value="reaching definitions (work in progress)" />
+    <MESSAGE value="rd errors resolved" />
+    <MESSAGE value="Correct placement of classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correct placement of classes" />
   </component>
 </project>

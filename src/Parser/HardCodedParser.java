@@ -1,17 +1,18 @@
+package Parser;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import AST.TracerProgram;
 import AST.declaration.*;
-import AST.expressions.*;
 import AST.statements.*;
 import AST.expressions.lexpressions.*;
 import AST.expressions.arrayExpressions.*;
 import AST.expressions.booleanExpressions.*;
 
 
-public class AnalysisModule {
+public class HardCodedParser {
 
     public static void main(String[] args) {
 
@@ -32,7 +33,7 @@ public class AnalysisModule {
         }
 
 
-        //Hard Coded Parser
+        //Hard Coded HardCodedParser
 
         //int [3] a;
         Declaration decL1 = new ArrayDec("a", 3);

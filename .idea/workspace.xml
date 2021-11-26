@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="rd errors resolved">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Analyses/reachingDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyses/reachingDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AnalysisModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/Parser.java" afterDir="false" />
-    </list>
+    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="Correct placement of classes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637921222543</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Correct placement of classes">
+      <created>1637922471278</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1637922471278</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +196,7 @@
     <MESSAGE value="adding necessary methods for building project" />
     <MESSAGE value="reaching definitions (work in progress)" />
     <MESSAGE value="rd errors resolved" />
-    <option name="LAST_COMMIT_MESSAGE" value="rd errors resolved" />
+    <MESSAGE value="Correct placement of classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correct placement of classes" />
   </component>
 </project>

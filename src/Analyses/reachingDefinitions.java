@@ -50,8 +50,8 @@ public class reachingDefinitions implements Analysis{
             for(Edges e : getControlFlowAnalysis().edgesList){
                 if(l == e.getEndNode().getId()){
                     ArrayList<ArrayList<String>> t =
-                            (ArrayList<ArrayList<String>>) analysisSet.get(e.getBeginNode().getId()).clone();
-                    t.removeAll(kill(e,analysisSet.get(e.getBeginNode().getId())));
+                            (ArrayList<ArrayList<String>>) analysisSet.get(e.getBeginNode().getId());
+                    //t.removeAll(kill(e,analysisSet.get(e.getBeginNode().getId())));
 
 
                 }

@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Analyses/reachingDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyses/reachingDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/programG/Edges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/Edges.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/programG/controlFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/controlFlow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/programG/Nodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/Nodes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="patrik" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,6 +42,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -156,6 +157,7 @@
     <MESSAGE value="picovina jebana" />
     <MESSAGE value="Control Flow analysis class finished" />
     <MESSAGE value="adding necessary methods for building project" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding necessary methods for building project" />
+    <MESSAGE value="reaching definitions (work in progress)" />
+    <option name="LAST_COMMIT_MESSAGE" value="reaching definitions (work in progress)" />
   </component>
 </project>

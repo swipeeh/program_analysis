@@ -1,0 +1,123 @@
+Index: src/test.microc
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>int[3] a;\r\nint x;\r\nx := 0;\r\nwhile x<3 {\r\n\ta[x] := 1;\r\n\tif x==2 {\r\n\t\ta[x] := 3;\r\n\t}\r\n}\r\nwrite a[0]+a[2];
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test.microc b/src/test.microc
+--- a/src/test.microc	(revision 9cdd0db439960d12469776756a6e2479c052c9c0)
++++ b/src/test.microc	(date 1637921743969)
+@@ -7,4 +7,6 @@
+ 		a[x] := 3;
+ 	}
+ }
+-write a[0]+a[2];
+\ No newline at end of file
++write a[0]+a[2];
++
++
+Index: src/AnalysisModule.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.io.File;\r\nimport java.io.FileNotFoundException;\r\nimport java.util.Scanner;\r\n\r\nimport AST.TracerProgram;\r\nimport AST.declaration.*;\r\nimport AST.expressions.*;\r\nimport AST.statements.*;\r\nimport AST.expressions.lexpressions.*;\r\nimport AST.expressions.arrayExpressions.*;\r\nimport AST.expressions.booleanExpressions.*;\r\n\r\n\r\npublic class AnalysisModule {\r\n\r\n    public static void main(String[] args) {\r\n\r\n\r\n        // Read test file\r\n        try {\r\n            File myObj = new File(\"src/test.microc\");\r\n            Scanner myReader = new Scanner(myObj);\r\n            while (myReader.hasNextLine()) {\r\n                // For each line of the file, split it into tokens\r\n                String data = myReader.nextLine();\r\n                System.out.println(data);\r\n            }\r\n            myReader.close();\r\n        } catch (FileNotFoundException e) {\r\n            System.out.println(\"An error occurred.\");\r\n            e.printStackTrace();\r\n        }\r\n\r\n\r\n        //Hard Coded Parser\r\n\r\n        //int [3] a;\r\n        Declaration decL1 = new ArrayDec(\"a\", 3);\r\n\r\n        //int x\r\n        Declaration decL2 = new IntegerDec(\"x\");\r\n        Declaration decL = new DoubleDec(decL1, decL2);\r\n\r\n        //x := 0\r\n        lExpressions expL3 = new lVarOperator(\"x\");\r\n        aExpressions expL31 = new aValOperator(0);\r\n        Statements stateL3 = new AssignmentEvent(expL3, expL31);\r\n\r\n        //x > 3\r\n        aExpressions expL4 = new aVarOperator(\"x\");\r\n        aExpressions expL41 = new aValOperator(3);\r\n        bExpressions expL42 = new relOperator(expL4, expL41,\">\");\r\n\r\n        // a[x] := 1\r\n        aExpressions expL5 = new aVarOperator(\"x\");\r\n        lExpressions expL51 = new lArrOperator(expL5,\"a\");\r\n        aExpressions expL52 = new aValOperator(1);\r\n        Statements stateL5 = new AssignmentEvent(expL51, expL52);\r\n\r\n        // x == 2\r\n        aExpressions expL6 = new aVarOperator(\"x\");\r\n        aExpressions expL61 = new aValOperator(2);\r\n        bExpressions expL62 = new relOperator(expL6, expL61, \"==\");\r\n\r\n        // a[x] := 3\r\n        aExpressions expL7 = new aVarOperator(\"x\");\r\n        lExpressions expL71 = new lArrOperator(expL7,\"a\");\r\n        aExpressions expL72 = new aValOperator(3);\r\n        Statements stateL7 = new AssignmentEvent(expL71, expL72);\r\n\r\n        //If x==2 then a[x] := 3\r\n        Statements stateL6 = new IfStatements(expL62, stateL7);\r\n\r\n        // a[x] := 1\r\n        // If x==2 then a[x] := 3\r\n        Statements stateL5L6 = new DoubleStatements(stateL5, stateL6);\r\n\r\n        //While x> 3 then\r\n        // a[x] := 1\r\n        // If x==2 then a[x] := 3\r\n        Statements stateL4 = new WhileStatements(expL42, stateL5L6);\r\n\r\n        //x := 5\r\n        lExpressions expL8 = new lVarOperator(\"x\");\r\n        aExpressions expL81 = new aValOperator(5);\r\n        Statements stateL8 = new AssignmentEvent(expL8, expL81);\r\n\r\n        //While x> 3 then\r\n        // a[x] := 1\r\n        // If x==2 then a[x] := 3 end if\r\n        // end while\r\n        // x := 5\r\n        Statements stateL4L8 = new DoubleStatements(stateL4, stateL8);\r\n\r\n        //x := 0\r\n        //While x> 3 then\r\n        // a[x] := 1\r\n        // If x==2 then a[x] := 3 end if\r\n        // end while\r\n        // x := 5\r\n        Statements state1 = new DoubleStatements(stateL3, stateL4L8);\r\n\r\n        TracerProgram testProgram = new TracerProgram(decL, state1);\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/AnalysisModule.java b/src/AnalysisModule.java
+--- a/src/AnalysisModule.java	(revision 9cdd0db439960d12469776756a6e2479c052c9c0)
++++ b/src/AnalysisModule.java	(date 1637923265700)
+@@ -104,10 +104,6 @@
+ 
+ 
+ 
+-
+-
+-
+-
+     }
+ 
+ }
+Index: src/WorklistAlgorithms/Worklist.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package WorklistAlgorithms;\r\n\r\nimport Analyses.Analysis;\r\nimport java.util.ArrayList;\r\n\r\npublic class Worklist {\r\n\r\n    //Type for First in First or Last in First Out\r\n    private String analysisType;\r\n    private Analysis analysis;\r\n    public ArrayList<Integer> w;\r\n\r\n    public Worklist(Analysis analysisName, String analysisType) {\r\n        this.analysis = analysisName;\r\n        this.analysisType = analysisType;\r\n\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/WorklistAlgorithms/Worklist.java b/src/WorklistAlgorithms/Worklist.java
+--- a/src/WorklistAlgorithms/Worklist.java	(revision 9cdd0db439960d12469776756a6e2479c052c9c0)
++++ b/src/WorklistAlgorithms/Worklist.java	(date 1637921293197)
+@@ -5,7 +5,7 @@
+ 
+ public class Worklist {
+ 
+-    //Type for First in First or Last in First Out
++    //Type for FIFO (First in First Out) or LIFO (Last in First Out)
+     private String analysisType;
+     private Analysis analysis;
+     public ArrayList<Integer> w;
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"daefb738-2852-4609-bb0e-10a71e2ca21b\" name=\"Changes\" comment=\"reaching definitions (work in progress)\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Analyses/reachingDefinitions.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Analyses/reachingDefinitions.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/programG/Edges.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/programG/Edges.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/programG/Nodes.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/programG/Nodes.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1z6CpLRahDUPhEgmeNxpBBDXFKt\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/src/AST\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Modules\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.0\" />\r\n    <property name=\"run.code.analysis.last.selected.profile\" value=\"pProject Default\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\patih\\Desktop\\Personal shit\\skola\\skola DTU\\program analysis\\program_analysis\\src\\AST\" />\r\n      <recent name=\"C:\\Users\\patih\\Desktop\\Personal shit\\skola\\skola DTU\\program analysis\\program_analysis\\src\\AST\\expressions\\aexpressions\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"daefb738-2852-4609-bb0e-10a71e2ca21b\" name=\"Changes\" comment=\"\" />\r\n      <created>1633459333641</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1633459333641</updated>\r\n      <workItem from=\"1633459335081\" duration=\"3871000\" />\r\n      <workItem from=\"1633539536000\" duration=\"2759000\" />\r\n      <workItem from=\"1633691835185\" duration=\"74000\" />\r\n      <workItem from=\"1634055424781\" duration=\"5865000\" />\r\n      <workItem from=\"1636107732901\" duration=\"543000\" />\r\n      <workItem from=\"1637661420779\" duration=\"6075000\" />\r\n      <workItem from=\"1637916225643\" duration=\"2913000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Initial structure + declaration of program graph sub classes\">\r\n      <created>1633460403155</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1633460403155</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"control flow class\">\r\n      <created>1633460962313</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1633460962313</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"AST needs to be implemented before we can continue with #controlFlow class.\">\r\n      <created>1633461429998</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1633461429998</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"first attempts on ASTs\">\r\n      <created>1633462477197</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1633462477197</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"structure\">\r\n      <created>1633463053573</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1633463053573</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"ControlFlow Analysis = edgeDeclaration class\">\r\n      <created>1637665771538</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1637665771538</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"picovina jebana\">\r\n      <created>1637667700920</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1637667700920</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Control Flow analysis class finished\">\r\n      <created>1637668932140</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1637668932140</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"adding necessary methods for building project\">\r\n      <created>1637669121469</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1637669121469</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"10\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Initial structure + declaration of program graph sub classes\" />\r\n    <MESSAGE value=\"control flow class\" />\r\n    <MESSAGE value=\"AST needs to be implemented before we can continue with #controlFlow class.\" />\r\n    <MESSAGE value=\"first attempts on ASTs\" />\r\n    <MESSAGE value=\"structure\" />\r\n    <MESSAGE value=\"ControlFlow Analysis = edgeDeclaration class\" />\r\n    <MESSAGE value=\"picovina jebana\" />\r\n    <MESSAGE value=\"Control Flow analysis class finished\" />\r\n    <MESSAGE value=\"adding necessary methods for building project\" />\r\n    <MESSAGE value=\"reaching definitions (work in progress)\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"reaching definitions (work in progress)\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 9cdd0db439960d12469776756a6e2479c052c9c0)
++++ b/.idea/workspace.xml	(date 1637922301034)
+@@ -3,9 +3,29 @@
+   <component name="ChangeListManager">
+     <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="reaching definitions (work in progress)">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Analyses/reachingDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyses/reachingDefinitions.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/programG/Edges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/Edges.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/programG/Nodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/Nodes.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/declaration/ArrayDec.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/declaration/DoubleDec.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/declaration/EmptyDec.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/declaration/IntegerDec.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/declaration/RecordDec.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aArithOperator.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aArrOperator.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aFirstOperator.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aSecondOperator.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aValOperator.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aVarOperator.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/booleanExpressions/bOperator.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/booleanExpressions/norOperator.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/booleanExpressions/relOperator.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/booleanExpressions/tfOperator.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/lexpressions/lArrOperator.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/lexpressions/lFirstOperator.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/lexpressions/lSecondOperator.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/lexpressions/lVarOperator.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/statements/IfStatements.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/AnalysisModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnalysisModule.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/WorklistAlgorithms/Worklist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorklistAlgorithms/Worklist.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test.microc" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.microc" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -49,6 +69,20 @@
+       <recent name="C:\Users\patih\Desktop\Personal shit\skola\skola DTU\program analysis\program_analysis\src\AST" />
+       <recent name="C:\Users\patih\Desktop\Personal shit\skola\skola DTU\program analysis\program_analysis\src\AST\expressions\aexpressions" />
+     </key>
++  </component>
++  <component name="RunManager">
++    <configuration name="AnalysisModule" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="AnalysisModule" />
++      <module name="program_analysis" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.AnalysisModule" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">

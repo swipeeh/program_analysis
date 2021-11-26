@@ -1,0 +1,37 @@
+Index: src/WorklistAlgorithms/Worklist.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package WorklistAlgorithms;\r\n\r\nimport Analyses.Analysis;\r\nimport java.util.ArrayList;\r\n\r\npublic class Worklist {\r\n\r\n    //Type for First in First or Last in First Out\r\n    private String analysisType;\r\n    private Analysis analysis;\r\n    public ArrayList<Integer> w;\r\n\r\n    public Worklist(Analysis analysisName, String analysisType) {\r\n        this.analysis = analysisName;\r\n        this.analysisType = analysisType;\r\n\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/WorklistAlgorithms/Worklist.java b/src/WorklistAlgorithms/Worklist.java
+--- a/src/WorklistAlgorithms/Worklist.java	(revision c471f719e7b516160f47c9499fac3698c0363b6c)
++++ b/src/WorklistAlgorithms/Worklist.java	(date 1637921244682)
+@@ -5,7 +5,7 @@
+ 
+ public class Worklist {
+ 
+-    //Type for First in First or Last in First Out
++    //Type for FIFO (First in First Out) or LIFO (Last in First Out)
+     private String analysisType;
+     private Analysis analysis;
+     public ArrayList<Integer> w;
+Index: src/AnalysisModule.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.io.File;\r\nimport java.io.FileNotFoundException;\r\nimport java.util.Scanner;\r\n\r\nimport AST.TracerProgram;\r\nimport AST.declaration.*;\r\nimport AST.expressions.*;\r\nimport AST.statements.*;\r\nimport AST.expressions.lexpressions.*;\r\nimport AST.expressions.arrayExpressions.*;\r\nimport AST.expressions.booleanExpressions.*;\r\n\r\n\r\npublic class AnalysisModule {\r\n\r\n    public static void main(String[] args) {\r\n\r\n\r\n        // Read test file\r\n        try {\r\n            File myObj = new File(\"src/test.microc\");\r\n            Scanner myReader = new Scanner(myObj);\r\n            while (myReader.hasNextLine()) {\r\n                // For each line of the file, split it into tokens\r\n                String data = myReader.nextLine();\r\n                System.out.println(data);\r\n            }\r\n            myReader.close();\r\n        } catch (FileNotFoundException e) {\r\n            System.out.println(\"An error occurred.\");\r\n            e.printStackTrace();\r\n        }\r\n\r\n\r\n        //Hard Coded Parser\r\n\r\n        //int [3] a;\r\n        Declaration decL1 = new ArrayDec(\"a\", 3);\r\n\r\n        //int x\r\n        Declaration decL2 = new IntegerDec(\"x\");\r\n        Declaration decL = new DoubleDec(decL1, decL2);\r\n\r\n        //x := 0\r\n        lExpressions expL3 = new lVarOperator(\"x\");\r\n        aExpressions expL31 = new aValOperator(0);\r\n        Statements stateL3 = new AssignmentEvent(expL3, expL31);\r\n\r\n        //x > 3\r\n        aExpressions expL4 = new aVarOperator(\"x\");\r\n        aExpressions expL41 = new aValOperator(3);\r\n        bExpressions expL42 = new relOperator(expL4, expL41,\">\");\r\n\r\n        // a[x] := 1\r\n        aExpressions expL5 = new aVarOperator(\"x\");\r\n        lExpressions expL51 = new lArrOperator(expL5,\"a\");\r\n        aExpressions expL52 = new aValOperator(1);\r\n        Statements stateL5 = new AssignmentEvent(expL51, expL52);\r\n\r\n        // x == 2\r\n        aExpressions expL6 = new aVarOperator(\"x\");\r\n        aExpressions expL61 = new aValOperator(2);\r\n        bExpressions expL62 = new relOperator(expL6, expL61, \"==\");\r\n\r\n        // a[x] := 3\r\n        aExpressions expL7 = new aVarOperator(\"x\");\r\n        lExpressions expL71 = new lArrOperator(expL7,\"a\");\r\n        aExpressions expL72 = new aValOperator(3);\r\n        Statements stateL7 = new AssignmentEvent(expL71, expL72);\r\n\r\n        //If x==2 then a[x] := 3\r\n        Statements stateL6 = new IfStatements(expL62, stateL7);\r\n\r\n        // a[x] := 1\r\n        // If x==2 then a[x] := 3\r\n        Statements stateL5L6 = new DoubleStatements(stateL5, stateL6);\r\n\r\n        //While x> 3 then\r\n        // a[x] := 1\r\n        // If x==2 then a[x] := 3\r\n        Statements stateL4 = new WhileStatements(expL42, stateL5L6);\r\n\r\n        //x := 5\r\n        lExpressions expL8 = new lVarOperator(\"x\");\r\n        aExpressions expL81 = new aValOperator(5);\r\n        Statements stateL8 = new AssignmentEvent(expL8, expL81);\r\n\r\n        //While x> 3 then\r\n        // a[x] := 1\r\n        // If x==2 then a[x] := 3 end if\r\n        // end while\r\n        // x := 5\r\n        Statements stateL4L8 = new DoubleStatements(stateL4, stateL8);\r\n\r\n        //x := 0\r\n        //While x> 3 then\r\n        // a[x] := 1\r\n        // If x==2 then a[x] := 3 end if\r\n        // end while\r\n        // x := 5\r\n        Statements state1 = new DoubleStatements(stateL3, stateL4L8);\r\n\r\n        TracerProgram testProgram = new TracerProgram(decL, state1);\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/AnalysisModule.java b/src/AnalysisModule.java
+--- a/src/AnalysisModule.java	(revision c471f719e7b516160f47c9499fac3698c0363b6c)
++++ b/src/AnalysisModule.java	(date 1637921244692)
+@@ -107,7 +107,6 @@
+ 
+ 
+ 
+-
+     }
+ 
+ }

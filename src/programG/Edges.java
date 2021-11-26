@@ -15,27 +15,24 @@ public class Edges {
     private int position;
 
 
-    public Edges(Node beginNode, Node endNode) {
+    public Edges(Node beginNode, Node endNode, Tracer tracer,int position) {
         this.beginNode = beginNode;
         this.endNode = endNode;
         this.tracer = tracer;
         this.position = position;
     }
 
-    public int getId(){return this.position;}
+    public int getId(){
+        return this.position;
+    }
 
     public Edges(Declaration decl, Nodes fNode, Nodes lNode) {
-
     }
 
     public Edges(Nodes fNode, Nodes tNode, bExpressions boolExpression) {
-
-
     }
 
     public Edges(Statements stat, Nodes fNode, Nodes lNode) {
-
-
     }
 
     public Node getBeginNode() {

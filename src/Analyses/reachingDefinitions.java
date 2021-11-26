@@ -1,5 +1,6 @@
 package Analyses;
 
+
 import programG.Edges;
 import programG.Nodes;
 import programG.controlFlow;
@@ -46,14 +47,20 @@ public class reachingDefinitions implements Analysis{
     public ArrayList<ArrayList<String>> newConstraint(Integer l) {
         ArrayList<ArrayList<String>> r = new ArrayList<>();
         if(l!=0){
-            for(Edges e : controlFlow.edgeList){
+            for(Edges e : getControlFlowAnalysis().edgesList){
                 if(l == e.getEndNode().getId()){
-                    ArrayList<ArrayList<String>> t = (ArrayList<ArrayList<String>>) analysisSet.get(e.getBeginNode().getId()).clone();
+                    ArrayList<ArrayList<String>> t =
+                            (ArrayList<ArrayList<String>>) analysisSet.get(e.getBeginNode().getId()).clone();
+                    t.removeAll(kill(e,analysisSet.get(e.getBeginNode().getId())));
+
 
                 }
             }
         }
+        return r;
     }
+
+
 
     @Override
     public controlFlow getControlFlowAnalysis() {

@@ -1,10 +1,10 @@
-package programG;
+package graphConstruction;
 
 
 import AST.Tracer;
-import AST.declaration.Declaration;
+import AST.declarationInterface;
 import AST.expressions.booleanExpressions.bExpressions;
-import AST.statements.Statements;
+import AST.statementInterface;
 public class Edges {
 
     private Nodes beginNode;
@@ -19,11 +19,11 @@ public class Edges {
         this.tracer = tracer;
         this.position = position;}
 
-    public Edges(Declaration decl, Nodes fNode, Nodes lNode) {}
+    public Edges(declarationInterface decl, Nodes fNode, Nodes lNode) {}
 
     public Edges(Nodes fNode, Nodes tNode, bExpressions boolExpression) {}
 
-    public Edges(Statements stat, Nodes fNode, Nodes lNode) {}
+    public Edges(statementInterface stat, Nodes fNode, Nodes lNode) {}
 
     public Nodes getBeginNode() {return beginNode;}
 

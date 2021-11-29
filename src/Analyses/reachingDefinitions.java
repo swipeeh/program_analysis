@@ -1,9 +1,9 @@
 package Analyses;
 
 
-import programG.Edges;
-import programG.Nodes;
-import programG.controlFlow;
+import graphConstruction.Edges;
+import graphConstruction.Nodes;
+import graphConstruction.controlFlow;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -74,13 +74,13 @@ public class reachingDefinitions implements Analysis{
     //Method for removing Node from set.
     public ArrayList<ArrayList<String>> kNode(Edges e, ArrayList<ArrayList<String>> reachingDefinitionsElement){
         ArrayList<ArrayList<String>> r = new ArrayList<>();
-        if(e.getTracer().getClass().getName().equals("AST.declaration.IntegerDec") || e.getTracer().getClass().getName().equals("AST.declaration.ArrayDec")) {
+        if(e.getTracer().getClass().getName().equals("AST.intDeclarationInterface") || e.getTracer().getClass().getName().equals("AST.arrDeclarationInterface")) {
             ArrayList<String> t = new ArrayList<>();
             t.add(e.getTracer().getidentifier());
             t.add("0");
             r.add(t);
         }
-        else if(e.getTracer().getClass().getName().equals("AST.declaration.RecordDec")){
+        else if(e.getTracer().getClass().getName().equals("AST.rDeclarationInterface")){
             ArrayList<String> t = new ArrayList<>();
             t.add(e.getTracer().getidentifier() +"FST");
             t.add("0");
@@ -100,7 +100,7 @@ public class reachingDefinitions implements Analysis{
     //Method for generating - adding new nodes into the set
     public ArrayList<ArrayList<String>> gNode(Edges e){
         ArrayList<ArrayList<String>> r = new ArrayList<>();
-        if(e.getTracer().getClass().getName().equals("AST.declaration.IntegerDec")){
+        if(e.getTracer().getClass().getName().equals("AST.intDeclarationInterface")){
         ArrayList<String> t = new ArrayList<>();
             t.add(e.getTracer().getidentifier() +"FST");
             t.add(e.getBeginNode().getId().toString());
@@ -112,7 +112,7 @@ public class reachingDefinitions implements Analysis{
             t2.add(e.getEndNode().getId().toString());
             r.add(t2);
         }
-        else if(e.getTracer().getClass().getName().equals("AST.statements.AssignmentEvent")){
+        else if(e.getTracer().getClass().getName().equals("AST.assignmentStatement")){
             ArrayList<String> t = new ArrayList<>();
             t.add(e.getTracer().getLExpression().getidentifier());
             t.add(e.getBeginNode().getId().toString());

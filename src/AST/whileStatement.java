@@ -1,51 +1,49 @@
-package AST.statements;
-
+package AST;
 
 import AST.expressions.arrayExpressions.aExpressions;
 import AST.expressions.booleanExpressions.bExpressions;
 import AST.expressions.lexpressions.lExpressions;
 
-public class IfStatements extends Statements {
+public class whileStatement extends statementInterface {
 
     private bExpressions boolExpression;
-    private Statements statement;
+    private statementInterface statement;
 
-    public IfStatements(bExpressions boolExp, Statements sta) {
+    public whileStatement(bExpressions boolExp, statementInterface sta) {
         this.boolExpression = boolExp;
         this.statement = sta;
     }
 
 
     @Override
-    public Statements statementOne() {return this.statement;}
+    public statementInterface statementOne() {
+        return null;
+    }
 
     @Override
-    public Statements statementTwo() {return this.statement;}
+    public statementInterface statementTwo() {
+        return null;
+    }
 
     public bExpressions getBoolExpression() {
         return this.boolExpression;
     }
 
-
-    public Statements getFirstStatement() {
+    public statementInterface getFirstStatement() {
         return this.statement;
     }
 
-
-    public Statements getSecondStatement() {
+    public statementInterface getSecondStatement() {
         return null;
     }
-
 
     public String getIdentifier() {
         return null;
     }
 
-
     public lExpressions getlExpression() {
         return null;
     }
-
 
     public aExpressions getaExpression() {
         return null;
@@ -60,3 +58,4 @@ public class IfStatements extends Statements {
         return null;
     }
 }
+

@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="Method for Generate -ing Nodes in reaching definitions class">
+    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="Method for creating new constraint finished no bugs nad builds.">
+      <change beforePath="$PROJECT_DIR$/src/AST/TracerProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/TracerProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/declaration/ArrayDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/arrDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/declaration/Declaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/declaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/declaration/DoubleDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/doubleDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/declaration/EmptyDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/eDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/declaration/IntegerDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/intDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/declaration/RecordDec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/rDeclaration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Analyses/reachingDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyses/reachingDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/HardCodedParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/HardCodedParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/programG/Edges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/Edges.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/programG/Nodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/Nodes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/programG/controlFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/programG/controlFlow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,11 +60,11 @@
   </component>
   <component name="RunManager" selected="Application.HardCodedParser">
     <configuration name="HardCodedParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Parser.HardCodedParser" />
+      <option name="MAIN_CLASS_NAME" value="graphConstruction.HardCodedParser" />
       <module name="program_analysis" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Parser.*" />
+          <option name="PATTERN" value="graphConstruction.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -186,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638187187071</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Method for creating new constraint finished no bugs nad builds.">
+      <created>1638187641740</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1638187641740</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +237,7 @@
     <MESSAGE value="Correct placement of classes" />
     <MESSAGE value="Method for Kill -ing Nodes in reaching definitions class" />
     <MESSAGE value="Method for Generate -ing Nodes in reaching definitions class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Method for Generate -ing Nodes in reaching definitions class" />
+    <MESSAGE value="Method for creating new constraint finished no bugs nad builds." />
+    <option name="LAST_COMMIT_MESSAGE" value="Method for creating new constraint finished no bugs nad builds." />
   </component>
 </project>

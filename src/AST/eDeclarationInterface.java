@@ -1,9 +1,9 @@
-package AST.declaration;
+package AST;
 
 import AST.expressions.arrayExpressions.aExpressions;
 import AST.expressions.lexpressions.lExpressions;
 
-public class RecordDec extends Declaration{
+public class eDeclarationInterface extends declarationInterface {
 
 
     @Override
@@ -32,12 +32,12 @@ public class RecordDec extends Declaration{
     }
 
     @Override
-    public Declaration getFirstDec() {
+    public declarationInterface getFirstDec() {
         return null;
     }
 
     @Override
-    public Declaration getSecondDec() {
+    public declarationInterface getSecondDec() {
         return null;
     }
 }

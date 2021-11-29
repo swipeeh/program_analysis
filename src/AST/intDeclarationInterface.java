@@ -1,9 +1,19 @@
-package AST.declaration;
+package AST;
 
 import AST.expressions.arrayExpressions.aExpressions;
 import AST.expressions.lexpressions.lExpressions;
 
-public class EmptyDec extends Declaration {
+public class intDeclarationInterface extends declarationInterface {
+
+    private String id;
+
+    public intDeclarationInterface(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
 
 
     @Override
@@ -32,12 +42,12 @@ public class EmptyDec extends Declaration {
     }
 
     @Override
-    public Declaration getFirstDec() {
+    public declarationInterface getFirstDec() {
         return null;
     }
 
     @Override
-    public Declaration getSecondDec() {
+    public declarationInterface getSecondDec() {
         return null;
     }
 }

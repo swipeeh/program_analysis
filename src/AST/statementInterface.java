@@ -1,14 +1,13 @@
-package AST.statements;
+package AST;
 
-import AST.Tracer;
 import AST.expressions.arrayExpressions.aExpressions;
 import AST.expressions.booleanExpressions.bExpressions;
 import AST.expressions.lexpressions.lExpressions;
 
-public abstract class Statements implements Tracer {
-    public abstract Statements statementOne();
+public abstract class statementInterface implements Tracer {
+    public abstract statementInterface statementOne();
 
-    public abstract Statements statementTwo();
+    public abstract statementInterface statementTwo();
 
     public abstract bExpressions getBoolExpression();
 

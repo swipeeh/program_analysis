@@ -1,9 +1,9 @@
-package programG;
+package graphConstruction;
 
 import java.util.ArrayList;
 import AST.TracerProgram;
-import AST.declaration.Declaration;
-import AST.statements.Statements;
+import AST.declarationInterface;
+import AST.statementInterface;
 import java.util.List;
 
 
@@ -42,50 +42,50 @@ public class controlFlow {
         return top;
     }
 
-    public Nodes edgeDec(Declaration decl, Nodes fNode, Nodes lNode) {
+    public Nodes edgeDec(declarationInterface decl, Nodes fNode, Nodes lNode) {
         Edges tEdge = new Edges(decl, fNode, lNode);
         Nodes tNode = new Nodes(decl, fNode, lNode);
         Nodes nNode = new Nodes(decl, fNode, lNode);
 
-        if (decl.getClass().getName().equals("AST.Declaration.IntegerDec")) {
+        if (decl.getClass().getName().equals("AST.Declaration.intDeclarationInterface")) {
             this.edgesList.add(tEdge);
-        } else if (decl.getClass().getName().equals("AST.Declaration.RecordDec")) {
+        } else if (decl.getClass().getName().equals("AST.Declaration.rDeclarationInterface")) {
             this.edgesList.add(tEdge);
-        } else if (decl.getClass().getName().equals("AST.Declaration.ArrayDec")) {
+        } else if (decl.getClass().getName().equals("AST.Declaration.arrDeclarationInterface")) {
             this.edgesList.add(tEdge);
-        } else if (decl.getSecondDec().getClass().equals("AST.Declaration.DoubleDec")) {
+        } else if (decl.getSecondDec().getClass().equals("AST.Declaration.doubleDeclarationInterface")) {
             this.nodesList.add(tNode);
             {
                 edgeDec(decl.getFirstDec(), fNode, tNode);
-                if (decl.getSecondDec().getClass().getName().equals("AST.declaration.DoubleDec")) {
+                if (decl.getSecondDec().getClass().getName().equals("AST.doubleDeclarationInterface")) {
                     edgeDec(decl.getSecondDec(), tNode, nNode);
                     return nNode;
                 }
-                if (!decl.getSecondDec().getClass().getName().equals("AST.Declataion.DoubleDec")) {
+                if (!decl.getSecondDec().getClass().getName().equals("AST.Declataion.doubleDeclarationInterface")) {
                     edgeDec(decl.getSecondDec(), tNode, nNode);
                     return lNode;
                 }
             }
-            if (decl.getClass().getName().equals("AST.declaration.EmptyDec")) {/*should not retrieve anything*/}
+            if (decl.getClass().getName().equals("AST.eDeclarationInterface")) {/*should not retrieve anything*/}
             }
         return null;
     }
 
 
-    public void edgesStatement(Statements stat,Nodes fNode,Nodes lNode){
-        if(stat.getClass().getName().equals("AST.Statements.AssignmentEvent")){
+    public void edgesStatement(statementInterface stat, Nodes fNode, Nodes lNode){
+        if(stat.getClass().getName().equals("AST.statementInterface.assignmentStatement")){
             Edges tEdge = new Edges(stat, fNode, lNode);
             this.edgesList.add(tEdge);
         }
-        else if(stat.getClass().getName().equals("AST.Statements.EmptyStatements")){/*should not retrieve anything*/}
-        else if(stat.getClass().getName().equals("AST.Statements.IfStatements")){
+        else if(stat.getClass().getName().equals("AST.statementInterface.eStatement")){/*should not retrieve anything*/}
+        else if(stat.getClass().getName().equals("AST.statementInterface.ifStatement")){
             Nodes tNode = new Nodes(fNode.getId()+1);
             this.nodesList.add(tNode);
             Edges tEdge = new Edges(fNode,tNode, stat.getBoolExpression());
             this.edgesList.add(tEdge);
             edgesStatement(stat.statementOne(),tNode,lNode);
         }
-        else if(stat.getClass().getName().equals("AST.Statements.WhileStatements")){
+        else if(stat.getClass().getName().equals("AST.statementInterface.whileStatement")){
             Nodes tNode = new Nodes(fNode.getSize()+1);
             this.nodesList.add(tNode);
             Edges tEdge = new Edges(fNode,tNode,stat.getBoolExpression());

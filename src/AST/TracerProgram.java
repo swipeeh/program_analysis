@@ -1,22 +1,19 @@
 package AST;
 
-import AST.declaration.Declaration;
-import AST.statements.Statements;
-
 public class TracerProgram {
-    private Declaration declaration;
-    private Statements statement;
+    private declarationInterface declaration;
+    private statementInterface statement;
 
-    public TracerProgram(Declaration decl, Statements stat){
+    public TracerProgram(declarationInterface decl, statementInterface stat){
         this.declaration = decl;
         this.statement = stat;
     }
 
-    public Declaration getDeclaration(){
+    public declarationInterface getDeclaration(){
         return this.declaration;
     }
 
-    public Statements getStatement(){
+    public statementInterface getStatement(){
         return this.statement;
     }
 }

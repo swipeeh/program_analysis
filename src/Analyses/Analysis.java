@@ -1,5 +1,5 @@
 package Analyses;
-import programG.controlFlow;
+import graphConstruction.controlFlow;
 
 import java.util.ArrayList;
 import java.util.HashMap;

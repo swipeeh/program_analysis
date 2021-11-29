@@ -1,17 +1,16 @@
-package AST.declaration;
-
+package AST;
 import AST.expressions.arrayExpressions.aExpressions;
 import AST.expressions.lexpressions.lExpressions;
 
-public class ArrayDec extends  Declaration {
+public class doubleDeclarationInterface extends declarationInterface {
+    private declarationInterface firstDec;
+    private declarationInterface secondDec;
 
-    private String ident;
-    private Integer size;
-
-    public ArrayDec(String ident, Integer size){
-        this.ident = ident;
-        this.size = size;
+    public doubleDeclarationInterface(declarationInterface firstDec, declarationInterface secondDec) {
+        this.firstDec = firstDec;
+        this.secondDec = secondDec;
     }
+
 
     @Override
     public String getidentifier() {
@@ -33,17 +32,18 @@ public class ArrayDec extends  Declaration {
         return null;
     }
 
-    public Integer getSize() {
-        return size;
-    }
-
     @Override
-    public Declaration getFirstDec() {
+    public Integer getSize() {
         return null;
     }
 
     @Override
-    public Declaration getSecondDec() {
+    public declarationInterface getFirstDec() {
+        return null;
+    }
+
+    @Override
+    public declarationInterface getSecondDec() {
         return null;
     }
 }

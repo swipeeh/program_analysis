@@ -1,25 +1,25 @@
-package AST.statements;
+package AST;
 
 import AST.expressions.Expressions;
 import AST.expressions.booleanExpressions.bExpressions;
 
-public class AssignmentEvent extends Statements {
+public class assignmentStatement extends statementInterface {
 
         Expressions first;
         Expressions second;
 
-        public AssignmentEvent(Expressions first, Expressions second) {
+        public assignmentStatement(Expressions first, Expressions second) {
             this.first = first;
             this.second = second;
         }
 
     @Override
-    public Statements statementOne() {
+    public statementInterface statementOne() {
         return null;
     }
 
     @Override
-    public Statements statementTwo() {
+    public statementInterface statementTwo() {
         return null;
     }
 

@@ -1,34 +1,34 @@
-package AST.statements;
+package AST;
 
 import AST.expressions.arrayExpressions.aExpressions;
 import AST.expressions.booleanExpressions.bExpressions;
 import AST.expressions.lexpressions.lExpressions;
 
-public class DoubleStatements extends Statements {
+public class doubleStatement extends statementInterface {
 
-    private Statements statementOne;
-    private Statements statementTwo;
+    private statementInterface statementOne;
+    private statementInterface statementTwo;
 
-    public DoubleStatements(Statements one, Statements two) {
+    public doubleStatement(statementInterface one, statementInterface two) {
         this.statementOne = one;
         this.statementTwo = two;
     }
 
-    public Statements getFirstStatement() {
+    public statementInterface getFirstStatement() {
         return this.statementOne;
     }
 
-    public Statements getSecondStatement() {
+    public statementInterface getSecondStatement() {
         return this.statementTwo;
     }
 
     @Override
-    public Statements statementOne() {
+    public statementInterface statementOne() {
         return null;
     }
 
     @Override
-    public Statements statementTwo() {
+    public statementInterface statementTwo() {
         return null;
     }
 

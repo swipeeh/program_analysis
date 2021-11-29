@@ -1,55 +1,43 @@
-package programG;
+package AST;
 
-import AST.declaration.Declaration;
 import AST.expressions.arrayExpressions.aExpressions;
 import AST.expressions.lexpressions.lExpressions;
 
-public class Nodes {
-
-    public int position;
-
-    public Nodes(Integer position){
-        this.position = position;
-    }
-
-    public Nodes(Declaration decl, Nodes fNode, Nodes lNode) {}
-
-    public Integer getId(){return this.position;}
-
-    public void setId(int position){
-        this.position = position;
-    }
+public class rDeclarationInterface extends declarationInterface {
 
 
+    @Override
     public String getidentifier() {
         return null;
     }
 
-
+    @Override
     public aExpressions getAExpression1() {
         return null;
     }
 
-
+    @Override
     public aExpressions getAExpression2() {
         return null;
     }
 
-
+    @Override
     public lExpressions getLExpression() {
         return null;
     }
 
-
+    @Override
     public Integer getSize() {
         return null;
     }
 
-    public Declaration getFirstDec() {
+    @Override
+    public declarationInterface getFirstDec() {
         return null;
     }
 
-    public Declaration getSecondDec() {
+    @Override
+    public declarationInterface getSecondDec() {
         return null;
     }
 }

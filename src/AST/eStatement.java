@@ -1,25 +1,25 @@
-package AST.statements;
+package AST;
 
 import AST.expressions.arrayExpressions.aExpressions;
 import AST.expressions.booleanExpressions.bExpressions;
 import AST.expressions.lexpressions.lExpressions;
 
-public class EmptyStatements extends Statements {
-    public Statements getFirstStatement() {
+public class eStatement extends statementInterface {
+    public statementInterface getFirstStatement() {
         return null;
     }
 
-    public Statements getSecondStatement() {
-        return null;
-    }
-
-    @Override
-    public Statements statementOne() {
+    public statementInterface getSecondStatement() {
         return null;
     }
 
     @Override
-    public Statements statementTwo() {
+    public statementInterface statementOne() {
+        return null;
+    }
+
+    @Override
+    public statementInterface statementTwo() {
         return null;
     }
 

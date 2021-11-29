@@ -1,53 +1,55 @@
-package AST.declaration;
+package graphConstruction;
 
+import AST.declarationInterface;
 import AST.expressions.arrayExpressions.aExpressions;
 import AST.expressions.lexpressions.lExpressions;
 
-public class IntegerDec extends Declaration{
+public class Nodes {
 
-    private String id;
+    public int position;
 
-    public IntegerDec(String id) {
-        this.id = id;
+    public Nodes(Integer position){
+        this.position = position;
     }
 
-    public String getId() {
-        return id;
+    public Nodes(declarationInterface decl, Nodes fNode, Nodes lNode) {}
+
+    public Integer getId(){return this.position;}
+
+    public void setId(int position){
+        this.position = position;
     }
 
 
-    @Override
     public String getidentifier() {
         return null;
     }
 
-    @Override
+
     public aExpressions getAExpression1() {
         return null;
     }
 
-    @Override
+
     public aExpressions getAExpression2() {
         return null;
     }
 
-    @Override
+
     public lExpressions getLExpression() {
         return null;
     }
 
-    @Override
+
     public Integer getSize() {
         return null;
     }
 
-    @Override
-    public Declaration getFirstDec() {
+    public declarationInterface getFirstDec() {
         return null;
     }
 
-    @Override
-    public Declaration getSecondDec() {
+    public declarationInterface getSecondDec() {
         return null;
     }
 }

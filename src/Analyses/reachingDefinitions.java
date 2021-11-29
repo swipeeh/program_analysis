@@ -74,13 +74,13 @@ public class reachingDefinitions implements Analysis{
     //Method for removing Node from set.
     public ArrayList<ArrayList<String>> kNode(Edges e, ArrayList<ArrayList<String>> reachingDefinitionsElement){
         ArrayList<ArrayList<String>> r = new ArrayList<>();
-        if(e.getTracer().getClass().getName().equals("AST.intDeclarationInterface") || e.getTracer().getClass().getName().equals("AST.arrDeclarationInterface")) {
+        if(e.getTracer().getClass().getName().equals("AbstractSyntaxTree.intDeclaration") || e.getTracer().getClass().getName().equals("AbstractSyntaxTree.arrDeclarationInterface")) {
             ArrayList<String> t = new ArrayList<>();
             t.add(e.getTracer().getidentifier());
             t.add("0");
             r.add(t);
         }
-        else if(e.getTracer().getClass().getName().equals("AST.rDeclarationInterface")){
+        else if(e.getTracer().getClass().getName().equals("AbstractSyntaxTree.rDeclaration")){
             ArrayList<String> t = new ArrayList<>();
             t.add(e.getTracer().getidentifier() +"FST");
             t.add("0");
@@ -90,7 +90,7 @@ public class reachingDefinitions implements Analysis{
             t2.add("0");
             r.add(t2);
         }
-        else if (e.getTracer().getClass().getName().equals("AST.statements.RecordAssignment")){
+        else if (e.getTracer().getClass().getName().equals("AbstractSyntaxTree.statements.RecordAssignment")){
             for(ArrayList<String> sArray : reachingDefinitionsElement){
                 for(String s : sArray){
                     if(s.equals(e.getTracer().getidentifier()+"FST")){r.add(sArray);}
@@ -100,7 +100,7 @@ public class reachingDefinitions implements Analysis{
     //Method for generating - adding new nodes into the set
     public ArrayList<ArrayList<String>> gNode(Edges e){
         ArrayList<ArrayList<String>> r = new ArrayList<>();
-        if(e.getTracer().getClass().getName().equals("AST.intDeclarationInterface")){
+        if(e.getTracer().getClass().getName().equals("AbstractSyntaxTree.intDeclaration")){
         ArrayList<String> t = new ArrayList<>();
             t.add(e.getTracer().getidentifier() +"FST");
             t.add(e.getBeginNode().getId().toString());
@@ -112,7 +112,7 @@ public class reachingDefinitions implements Analysis{
             t2.add(e.getEndNode().getId().toString());
             r.add(t2);
         }
-        else if(e.getTracer().getClass().getName().equals("AST.assignmentStatement")){
+        else if(e.getTracer().getClass().getName().equals("AbstractSyntaxTree.assignmentStatement")){
             ArrayList<String> t = new ArrayList<>();
             t.add(e.getTracer().getLExpression().getidentifier());
             t.add(e.getBeginNode().getId().toString());

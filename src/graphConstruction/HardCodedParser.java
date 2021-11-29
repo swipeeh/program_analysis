@@ -4,10 +4,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import AST.*;
-import AST.expressions.lexpressions.*;
-import AST.expressions.arrayExpressions.*;
-import AST.expressions.booleanExpressions.*;
+import AbstractSyntaxTree.*;
+import AbstractSyntaxTree.expressions.lexpressions.*;
+import AbstractSyntaxTree.expressions.arrayExpressions.*;
+import AbstractSyntaxTree.expressions.booleanExpressions.*;
 
 
 public class HardCodedParser {
@@ -37,8 +37,8 @@ public class HardCodedParser {
         declarationInterface decL1 = new arrDeclarationInterface("a", 3);
 
         //int x
-        declarationInterface decL2 = new intDeclarationInterface("x");
-        declarationInterface decL = new doubleDeclarationInterface(decL1, decL2);
+        declarationInterface decL2 = new intDeclaration("x");
+        declarationInterface decL = new doubleDeclaration(decL1, decL2);
 
         //x := 0
         lExpressions expL3 = new lVarOperator("x");
@@ -99,7 +99,7 @@ public class HardCodedParser {
         // x := 5
         statementInterface state1 = new doubleStatement(stateL3, stateL4L8);
 
-        TracerProgram testProgram = new TracerProgram(decL, state1);
+        Tracer testProgram = new Tracer(decL, state1);
 
 
 

@@ -1,19 +1,19 @@
 package graphConstruction;
 
 
-import AST.Tracer;
-import AST.declarationInterface;
-import AST.expressions.booleanExpressions.bExpressions;
-import AST.statementInterface;
+import AbstractSyntaxTree.tracerInterface;
+import AbstractSyntaxTree.declarationInterface;
+import AbstractSyntaxTree.expressions.booleanExpressions.bExpressions;
+import AbstractSyntaxTree.statementInterface;
 public class Edges {
 
     private Nodes beginNode;
-    private Tracer tracer;
+    private tracerInterface tracer;
     private Nodes endNode;
     private int position;
 
 
-    public Edges(Nodes beginNode, Nodes endNode, Tracer tracer,int position) {
+    public Edges(Nodes beginNode, Nodes endNode, tracerInterface tracer, int position) {
         this.beginNode = beginNode;
         this.endNode = endNode;
         this.tracer = tracer;
@@ -31,7 +31,7 @@ public class Edges {
 
     public void setBeginNode(Nodes beginNode) {this.beginNode = beginNode;}
 
-    public Tracer getTracer(){
+    public tracerInterface getTracer(){
         return this.tracer;
     }
 

@@ -1,54 +1,48 @@
-package graphConstruction;
-
-import AbstractSyntaxTree.declarationInterface;
+package AbstractSyntaxTree;
 import AbstractSyntaxTree.expressions.arrayExpressions.aExpressions;
 import AbstractSyntaxTree.expressions.lexpressions.lExpressions;
 
-public class Nodes {
+public class doubleDeclaration extends declarationInterface {
+    private declarationInterface firstDec;
+    private declarationInterface secondDec;
 
-    public int position;
-
-    public Nodes(Integer position){
-        this.position = position;
-    }
-
-    public Nodes(declarationInterface decl, Nodes fNode, Nodes lNode) {}
-
-    public Integer getId(){return this.position;}
-
-    public void setId(int position){
-        this.position = position;
+    public doubleDeclaration(declarationInterface firstDec, declarationInterface secondDec) {
+        this.firstDec = firstDec;
+        this.secondDec = secondDec;
     }
 
 
+    @Override
     public String getidentifier() {
         return null;
     }
 
-
+    @Override
     public aExpressions getAExpression1() {
         return null;
     }
 
-
+    @Override
     public aExpressions getAExpression2() {
         return null;
     }
 
-
+    @Override
     public lExpressions getLExpression() {
         return null;
     }
 
-
+    @Override
     public Integer getSize() {
         return null;
     }
 
+    @Override
     public declarationInterface getFirstDec() {
         return null;
     }
 
+    @Override
     public declarationInterface getSecondDec() {
         return null;
     }

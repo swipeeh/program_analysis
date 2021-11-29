@@ -93,10 +93,24 @@ public class reachingDefinitions implements Analysis{
         ArrayList<ArrayList<String>> r = new ArrayList<>();
         if(e.getTracer().getClass().getName().equals("AST.declaration.IntegerDec")){
         ArrayList<String> t = new ArrayList<>();
-        t.add(e.getTracer().getidentifier() +"FST");
-        t.add(e.getBeginNode().getId().toString());
-        t.add(e.getEndNode().getId().toString());
+            t.add(e.getTracer().getidentifier() +"FST");
+            t.add(e.getBeginNode().getId().toString());
+            t.add(e.getEndNode().getId().toString());
+            r.add(t);
+        ArrayList<String> t2 = new ArrayList<>();
+            t2.add(e.getTracer().getidentifier() +"SND");
+            t2.add(e.getBeginNode().getId().toString());
+            t2.add(e.getEndNode().getId().toString());
+            r.add(t2);
         }
+        else if(e.getTracer().getClass().getName().equals("AST.statements.AssignmentEvent")){
+            ArrayList<String> t = new ArrayList<>();
+            t.add(e.getTracer().getLExpression().getidentifier());
+            t.add(e.getBeginNode().getId().toString());
+            t.add(e.getEndNode().getId().toString());
+            r.add(t);
+        }
+        return r;
     }
 
     @Override

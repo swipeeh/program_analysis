@@ -1,12 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="structure">
-      <change afterPath="$PROJECT_DIR$/src/AST/statements/IfStatements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AST/statements/WhileStatements.java" afterDir="false" />
+    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="Structural changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lArrOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lArrOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AnalysisModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnalysisModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/Tracer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/TracerProgram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/Expressions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aArithOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aArrOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aExpressions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aFirstOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aSecondOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aValOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aVarOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/booleanExpressions/bExpressions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/booleanExpressions/bOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/booleanExpressions/norOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/booleanExpressions/relOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/booleanExpressions/tfOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/lexpressions/lArrOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/lexpressions/lExpressions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/lexpressions/lFirstOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/lexpressions/lSecondOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/lexpressions/lVarOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/statements/AssignmentEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/statements/DoubleStatements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/statements/EmptyStatements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/statements/IfStatements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/statements/Statements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/statements/WhileStatements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/Analyses/Analysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/program_analysis/Analyses/Analysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/Analyses/reachingDefinitions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/program_analysis/Analyses/reachingDefinitions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/Parser/HardCodedParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/programG/Edges.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/programG/Nodes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/programG/controlFlow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/AST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/AST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/Tracer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/tracerInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/TracerProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/Tracer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/arrDeclarationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/arrDeclarationInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/assignmentStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/assignmentStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/declarationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/declarationInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/doubleDeclarationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/doubleDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/doubleStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/doubleStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/eDeclarationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/eDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/eStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/eStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/Expressions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/Expressions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/arrayExpressions/aArithOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/arrayExpressions/aArithOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/arrayExpressions/aArrOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/arrayExpressions/aArrOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/arrayExpressions/aExpressions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/arrayExpressions/aExpressions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/arrayExpressions/aFirstOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/arrayExpressions/aFirstOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/arrayExpressions/aSecondOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/arrayExpressions/aSecondOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/arrayExpressions/aValOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/arrayExpressions/aValOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/arrayExpressions/aVarOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/arrayExpressions/aVarOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/booleanExpressions/bExpressions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/booleanExpressions/bExpressions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/booleanExpressions/bOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/booleanExpressions/bOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/booleanExpressions/norOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/booleanExpressions/norOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/booleanExpressions/relOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/booleanExpressions/relOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/booleanExpressions/tfOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/booleanExpressions/tfOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lArrOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/lexpressions/lArrOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lExpressions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/lexpressions/lExpressions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lFirstOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/lexpressions/lFirstOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lSecondOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/lexpressions/lSecondOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lVarOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/lexpressions/lVarOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/ifStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/ifStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/intDeclarationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/intDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/rDeclarationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/rDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/statementInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/statementInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AST/whileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/whileStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Analyses/reachingDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyses/reachingDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorklistAlgorithms/Worklist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphConstruction/Edges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphConstruction/Edges.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphConstruction/HardCodedParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphConstruction/HardCodedParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphConstruction/Nodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphConstruction/Nodes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphConstruction/controlFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphConstruction/controlFlow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +92,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="patrik" />
+        <entry key="$PROJECT_DIR$" value="Anders" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,10 +107,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/AST" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -50,25 +119,37 @@
       <recent name="C:\Users\patih\Desktop\Personal shit\skola\skola DTU\program analysis\program_analysis\src\AST\expressions\aexpressions" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AST">
-    <configuration name="AST" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="AST.AST" />
+  <component name="RunManager" selected="Application.HardCodedParser">
+    <configuration name="HardCodedParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="graphConstruction.HardCodedParser" />
       <module name="program_analysis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="graphConstruction.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnalysisMod" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="AnalysisModule" />
+    <configuration name="Parser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Parser" />
       <module name="program_analysis" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.AnalysisMod" />
-      <item itemvalue="Application.AST" />
+      <item itemvalue="Application.HardCodedParser" />
+      <item itemvalue="Application.Parser" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HardCodedParser" />
+        <item itemvalue="Application.Parser" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -82,6 +163,9 @@
       <workItem from="1633539536000" duration="2759000" />
       <workItem from="1633691835185" duration="74000" />
       <workItem from="1634055424781" duration="5865000" />
+      <workItem from="1636107732901" duration="543000" />
+      <workItem from="1637661420779" duration="6075000" />
+      <workItem from="1637916225643" duration="2913000" />
     </task>
     <task id="LOCAL-00001" summary="Initial structure + declaration of program graph sub classes">
       <created>1633460403155</created>
@@ -118,7 +202,77 @@
       <option name="project" value="LOCAL" />
       <updated>1633463053573</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ControlFlow Analysis = edgeDeclaration class">
+      <created>1637665771538</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1637665771538</updated>
+    </task>
+    <task id="LOCAL-00007" summary="picovina jebana">
+      <created>1637667700920</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1637667700920</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Control Flow analysis class finished">
+      <created>1637668932140</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1637668932140</updated>
+    </task>
+    <task id="LOCAL-00009" summary="adding necessary methods for building project">
+      <created>1637669121469</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1637669121469</updated>
+    </task>
+    <task id="LOCAL-00010" summary="rd errors resolved">
+      <created>1637921222543</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1637921222543</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Correct placement of classes">
+      <created>1637922471278</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1637922471278</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Method for Kill -ing Nodes in reaching definitions class">
+      <created>1638186929186</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1638186929186</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Method for Generate -ing Nodes in reaching definitions class">
+      <created>1638187187071</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1638187187071</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Method for creating new constraint finished no bugs nad builds.">
+      <created>1638187641740</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1638187641740</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Structural changes">
+      <created>1638188235596</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1638188235596</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +296,17 @@
     <MESSAGE value="AST needs to be implemented before we can continue with #controlFlow class." />
     <MESSAGE value="first attempts on ASTs" />
     <MESSAGE value="structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="structure" />
+    <MESSAGE value="ControlFlow Analysis = edgeDeclaration class" />
+    <MESSAGE value="picovina jebana" />
+    <MESSAGE value="Control Flow analysis class finished" />
+    <MESSAGE value="adding necessary methods for building project" />
+    <MESSAGE value="reaching definitions (work in progress)" />
+    <MESSAGE value="rd errors resolved" />
+    <MESSAGE value="Correct placement of classes" />
+    <MESSAGE value="Method for Kill -ing Nodes in reaching definitions class" />
+    <MESSAGE value="Method for Generate -ing Nodes in reaching definitions class" />
+    <MESSAGE value="Method for creating new constraint finished no bugs nad builds." />
+    <MESSAGE value="Structural changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Structural changes" />
   </component>
 </project>

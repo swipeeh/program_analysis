@@ -36,16 +36,19 @@ public class reachingDefinitions implements Analysis{
                 if(n.equals(e.getBeginNode())){this.infl.get(n.getId()).add(e.getEndNode().getId());}}}}
 
     //return the whole analysisSet
+    @Override
     public HashMap<Integer, ArrayList<ArrayList<String>>> getAnalysisSet() {
        return this.analysisSet;
     }
 
     //inserting updated nodes into analysis set
+    @Override
     public void updateAnalysisSet(Integer l, ArrayList<ArrayList<String>> nSolution) {
         for(ArrayList<String> aList : nSolution){
             if(!this.analysisSet.get(l).contains(aList)){this.analysisSet.get(l).add(aList);}}}
 
     //Method which creates the constraint
+    @Override
     public ArrayList<ArrayList<String>> newConstraint(Integer l) {
         ArrayList<ArrayList<String>> r = new ArrayList<>();
         if(l!=0){
@@ -74,7 +77,7 @@ public class reachingDefinitions implements Analysis{
     //Method for removing Node from set.
     public ArrayList<ArrayList<String>> kNode(Edges e, ArrayList<ArrayList<String>> reachingDefinitionsElement){
         ArrayList<ArrayList<String>> r = new ArrayList<>();
-        if(e.getTracer().getClass().getName().equals("AbstractSyntaxTree.intDeclaration") || e.getTracer().getClass().getName().equals("AbstractSyntaxTree.arrDeclarationInterface")) {
+        if(e.getTracer().getClass().getName().equals("AbstractSyntaxTree.intDeclaration") || e.getTracer().getClass().getName().equals("AbstractSyntaxTree.arrDeclaration")) {
             ArrayList<String> t = new ArrayList<>();
             t.add(e.getTracer().getidentifier());
             t.add("0");

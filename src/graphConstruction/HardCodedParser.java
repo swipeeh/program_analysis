@@ -34,7 +34,7 @@ public class HardCodedParser {
         //Hard Coded HardCodedParser
 
         //int [3] a;
-        declarationInterface decL1 = new arrDeclarationInterface("a", 3);
+        declarationInterface decL1 = new arrDeclaration("a", 3);
 
         //int x
         declarationInterface decL2 = new intDeclaration("x");

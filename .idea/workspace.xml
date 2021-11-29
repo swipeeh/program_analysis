@@ -2,78 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="Structural changes">
+      <change afterPath="$PROJECT_DIR$/src/Analyses/detectionOfSigns.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/Tracer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/TracerProgram.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/Expressions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aArithOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aArrOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aExpressions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aFirstOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aSecondOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aValOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/arrayExpressions/aVarOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/booleanExpressions/bExpressions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/booleanExpressions/bOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/booleanExpressions/norOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/booleanExpressions/relOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/booleanExpressions/tfOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/lexpressions/lArrOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/lexpressions/lExpressions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/lexpressions/lFirstOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/lexpressions/lSecondOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/expressions/lexpressions/lVarOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/statements/AssignmentEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/statements/DoubleStatements.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/statements/EmptyStatements.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/statements/IfStatements.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/statements/Statements.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/AST/statements/WhileStatements.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/Analyses/Analysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/program_analysis/Analyses/Analysis.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/Analyses/reachingDefinitions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/program_analysis/Analyses/reachingDefinitions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/Parser/HardCodedParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/programG/Edges.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/programG/Nodes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/programG/controlFlow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/AST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/AST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/Tracer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/tracerInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/TracerProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/Tracer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/arrDeclarationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/arrDeclarationInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/assignmentStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/assignmentStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/declarationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/declarationInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/doubleDeclarationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/doubleDeclaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/doubleStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/doubleStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/eDeclarationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/eDeclaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/eStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/eStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/Expressions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/Expressions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/arrayExpressions/aArithOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/arrayExpressions/aArithOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/arrayExpressions/aArrOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/arrayExpressions/aArrOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/arrayExpressions/aExpressions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/arrayExpressions/aExpressions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/arrayExpressions/aFirstOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/arrayExpressions/aFirstOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/arrayExpressions/aSecondOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/arrayExpressions/aSecondOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/arrayExpressions/aValOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/arrayExpressions/aValOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/arrayExpressions/aVarOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/arrayExpressions/aVarOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/booleanExpressions/bExpressions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/booleanExpressions/bExpressions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/booleanExpressions/bOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/booleanExpressions/bOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/booleanExpressions/norOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/booleanExpressions/norOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/booleanExpressions/relOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/booleanExpressions/relOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/booleanExpressions/tfOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/booleanExpressions/tfOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lArrOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/lexpressions/lArrOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lExpressions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/lexpressions/lExpressions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lFirstOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/lexpressions/lFirstOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lSecondOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/lexpressions/lSecondOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/expressions/lexpressions/lVarOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/expressions/lexpressions/lVarOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/ifStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/ifStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/intDeclarationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/intDeclaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/rDeclarationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/rDeclaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/statementInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/statementInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AST/whileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/whileStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/program_analysis/WorklistAlgorithms/Worklist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AbstractSyntaxTree/arrDeclarationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractSyntaxTree/arrDeclaration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Analyses/reachingDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyses/reachingDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorklistAlgorithms/Worklist.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphConstruction/Edges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphConstruction/Edges.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphConstruction/HardCodedParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphConstruction/HardCodedParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphConstruction/Nodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphConstruction/Nodes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphConstruction/controlFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphConstruction/controlFlow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,10 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Anders" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1z6CpLRahDUPhEgmeNxpBBDXFKt" />
   <component name="ProjectViewState">
@@ -146,6 +88,8 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Parser" />
+        <item itemvalue="Application.HardCodedParser" />
         <item itemvalue="Application.HardCodedParser" />
         <item itemvalue="Application.Parser" />
       </list>
@@ -272,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638188235596</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Structural changes">
+      <created>1638189563356</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1638189563356</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

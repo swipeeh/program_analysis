@@ -3,12 +3,12 @@ package AbstractSyntaxTree;
 import AbstractSyntaxTree.expressions.arrayExpressions.aExpressions;
 import AbstractSyntaxTree.expressions.lexpressions.lExpressions;
 
-public class arrDeclarationInterface extends declarationInterface {
+public class arrDeclaration extends declarationInterface {
 
     private String ident;
     private Integer size;
 
-    public arrDeclarationInterface(String ident, Integer size){
+    public arrDeclaration(String ident, Integer size){
         this.ident = ident;
         this.size = size;
     }

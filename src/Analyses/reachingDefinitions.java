@@ -44,10 +44,8 @@ public class reachingDefinitions implements Analysis{
     public void updateAnalysisSet(Integer l, ArrayList<ArrayList<String>> nSolution) {
         for(ArrayList<String> aList : nSolution){
             if(!this.analysisSet.get(l).contains(aList)){this.analysisSet.get(l).add(aList);}}}
-    
-    public HashMap<Integer, ArrayList<Integer>> getInfl() {return this.infl;}
 
-    //method which creates the constraint
+    //Method which creates the constraint
     public ArrayList<ArrayList<String>> newConstraint(Integer l) {
         ArrayList<ArrayList<String>> r = new ArrayList<>();
         if(l!=0){
@@ -55,9 +53,20 @@ public class reachingDefinitions implements Analysis{
                 if(l == e.getEndNode().getId()){
                     ArrayList<ArrayList<String>> t =
                             (ArrayList<ArrayList<String>>) analysisSet.get(e.getBeginNode().getId());
-                    //t.removeAll(kill(e,analysisSet.get(e.getBeginNode().getId())));
-                }
-            }
+                    t.removeAll(kNode(e,analysisSet.get(e.getBeginNode().getId())));
+                    t.addAll(gNode(e));
+                    for(ArrayList<String> aList : t){
+                        if(r.contains(0)){
+                            r.add(aList);}}}}
+        }
+        else{
+            for(Edges e : ControlFlowAnalysis.edgesList){
+                if(l ==0){
+                    for(String var : ControlFlowAnalysis.varList){
+                        ArrayList<String> t = new ArrayList<>();
+                        t.add(var);
+                        t.add(l.toString());
+                        r.add(t);}}}
         }
         return r;
     }
@@ -88,7 +97,7 @@ public class reachingDefinitions implements Analysis{
                     else if(s.equals(e.getTracer().getidentifier()+"SND")){r.add(sArray);}}}}
         return r;
     }
-
+    //Method for generating - adding new nodes into the set
     public ArrayList<ArrayList<String>> gNode(Edges e){
         ArrayList<ArrayList<String>> r = new ArrayList<>();
         if(e.getTracer().getClass().getName().equals("AST.declaration.IntegerDec")){
@@ -114,7 +123,7 @@ public class reachingDefinitions implements Analysis{
     }
 
     @Override
-    public controlFlow getControlFlowAnalysis() {
-        return null;
-    }
+    public controlFlow getControlFlowAnalysis() {return this.getControlFlowAnalysis();}
+    @Override
+    public HashMap<Integer, ArrayList<Integer>> getInfl() {return this.infl;}
 }

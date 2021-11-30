@@ -15,7 +15,13 @@ public class detectionOfSigns implements Analysis{
     public HashMap<Integer,ArrayList<Integer>> infl;
 
     public ArrayList<String> signed(arrExpression aExpression, ArrayList<String> detectionOfSignsElement){
-
+    ArrayList<String> r = new ArrayList<>();
+        if(aExpression.getClass().equals("AbstractSyntaxTree.arrValExpression")){
+            if(aExpression.getValue()>0){r.add("+");}
+            else if(aExpression.getValue()<0){r.add("-");}
+            else{r.add("0");}
+        }
+    return r;
     }
 
     public ArrayList<ArrayList<String>> changePosition(Edges e, ArrayList<ArrayList<String>> detectionOfSignsElement){

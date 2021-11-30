@@ -1,8 +1,8 @@
 package graphConstruction;
 
 import AbstractSyntaxTree.declarationInterface;
-import AbstractSyntaxTree.expressions.arrayExpressions.aExpressions;
-import AbstractSyntaxTree.expressions.lexpressions.lExpressions;
+import AbstractSyntaxTree.arrExpression;
+import AbstractSyntaxTree.lstExpression;
 
 public class Nodes {
 
@@ -26,17 +26,17 @@ public class Nodes {
     }
 
 
-    public aExpressions getAExpression1() {
+    public arrExpression getAExpression1() {
         return null;
     }
 
 
-    public aExpressions getAExpression2() {
+    public arrExpression getAExpression2() {
         return null;
     }
 
 
-    public lExpressions getLExpression() {
+    public lstExpression getLExpression() {
         return null;
     }
 

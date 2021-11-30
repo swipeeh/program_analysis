@@ -1,16 +1,6 @@
 package AbstractSyntaxTree;
 
-public class intDeclaration extends declarationInterface {
-
-    private String id;
-
-    public intDeclaration(String id) {
-        this.id = id;
-    }
-
-    public String getId() {
-        return id;
-    }
+public class Expressions implements tracerInterface {
 
 
     @Override
@@ -35,16 +25,6 @@ public class intDeclaration extends declarationInterface {
 
     @Override
     public Integer getSize() {
-        return null;
-    }
-
-    @Override
-    public declarationInterface getFirstDec() {
-        return null;
-    }
-
-    @Override
-    public declarationInterface getSecondDec() {
         return null;
     }
 }

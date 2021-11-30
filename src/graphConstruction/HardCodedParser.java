@@ -5,9 +5,6 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import AbstractSyntaxTree.*;
-import AbstractSyntaxTree.expressions.lexpressions.*;
-import AbstractSyntaxTree.expressions.arrayExpressions.*;
-import AbstractSyntaxTree.expressions.booleanExpressions.*;
 
 
 public class HardCodedParser {
@@ -41,30 +38,30 @@ public class HardCodedParser {
         declarationInterface decL = new doubleDeclaration(decL1, decL2);
 
         //x := 0
-        lExpressions expL3 = new lVarOperator("x");
-        aExpressions expL31 = new aValOperator(0);
+        lstExpression expL3 = new lstVarExpression("x");
+        arrExpression expL31 = new arrValExpression(0);
         statementInterface stateL3 = new assignmentStatement(expL3, expL31);
 
         //x > 3
-        aExpressions expL4 = new aVarOperator("x");
-        aExpressions expL41 = new aValOperator(3);
-        bExpressions expL42 = new relOperator(expL4, expL41,">");
+        arrExpression expL4 = new arrVarExpression("x");
+        arrExpression expL41 = new arrValExpression(3);
+        boolExpression expL42 = new boolRelationsExpression(expL4, expL41,">");
 
         // a[x] := 1
-        aExpressions expL5 = new aVarOperator("x");
-        lExpressions expL51 = new lArrOperator(expL5,"a");
-        aExpressions expL52 = new aValOperator(1);
+        arrExpression expL5 = new arrVarExpression("x");
+        lstExpression expL51 = new lstArrayExpression(expL5,"a");
+        arrExpression expL52 = new arrValExpression(1);
         statementInterface stateL5 = new assignmentStatement(expL51, expL52);
 
         // x == 2
-        aExpressions expL6 = new aVarOperator("x");
-        aExpressions expL61 = new aValOperator(2);
-        bExpressions expL62 = new relOperator(expL6, expL61, "==");
+        arrExpression expL6 = new arrVarExpression("x");
+        arrExpression expL61 = new arrValExpression(2);
+        boolExpression expL62 = new boolRelationsExpression(expL6, expL61, "==");
 
         // a[x] := 3
-        aExpressions expL7 = new aVarOperator("x");
-        lExpressions expL71 = new lArrOperator(expL7,"a");
-        aExpressions expL72 = new aValOperator(3);
+        arrExpression expL7 = new arrVarExpression("x");
+        lstExpression expL71 = new lstArrayExpression(expL7,"a");
+        arrExpression expL72 = new arrValExpression(3);
         statementInterface stateL7 = new assignmentStatement(expL71, expL72);
 
         //If x==2 then a[x] := 3
@@ -80,8 +77,8 @@ public class HardCodedParser {
         statementInterface stateL4 = new whileStatement(expL42, stateL5L6);
 
         //x := 5
-        lExpressions expL8 = new lVarOperator("x");
-        aExpressions expL81 = new aValOperator(5);
+        lstExpression expL8 = new lstVarExpression("x");
+        arrExpression expL81 = new arrValExpression(5);
         statementInterface stateL8 = new assignmentStatement(expL8, expL81);
 
         //While x> 3 then

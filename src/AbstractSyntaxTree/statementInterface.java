@@ -1,17 +1,13 @@
 package AbstractSyntaxTree;
 
-import AbstractSyntaxTree.expressions.arrayExpressions.aExpressions;
-import AbstractSyntaxTree.expressions.booleanExpressions.bExpressions;
-import AbstractSyntaxTree.expressions.lexpressions.lExpressions;
-
 public abstract class statementInterface implements tracerInterface {
     public abstract statementInterface statementOne();
 
     public abstract statementInterface statementTwo();
 
-    public abstract bExpressions getBoolExpression();
+    public abstract boolExpression getBoolExpression();
 
-    public bExpressions booleanExpression() {
+    public boolExpression booleanExpression() {
         return null;
     }
 
@@ -19,15 +15,15 @@ public abstract class statementInterface implements tracerInterface {
         return null;
     }
 
-    public aExpressions getAExpression1() {
+    public arrExpression getAExpression1() {
         return null;
     }
 
-    public aExpressions getAExpression2() {
+    public arrExpression getAExpression2() {
         return null;
     }
 
-    public lExpressions getLExpression() {
+    public lstExpression getLExpression() {
         return null;
     }
 

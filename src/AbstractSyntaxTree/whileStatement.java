@@ -1,15 +1,11 @@
 package AbstractSyntaxTree;
 
-import AbstractSyntaxTree.expressions.arrayExpressions.aExpressions;
-import AbstractSyntaxTree.expressions.booleanExpressions.bExpressions;
-import AbstractSyntaxTree.expressions.lexpressions.lExpressions;
-
 public class whileStatement extends statementInterface {
 
-    private bExpressions boolExpression;
+    private AbstractSyntaxTree.boolExpression boolExpression;
     private statementInterface statement;
 
-    public whileStatement(bExpressions boolExp, statementInterface sta) {
+    public whileStatement(AbstractSyntaxTree.boolExpression boolExp, statementInterface sta) {
         this.boolExpression = boolExp;
         this.statement = sta;
     }
@@ -25,7 +21,7 @@ public class whileStatement extends statementInterface {
         return null;
     }
 
-    public bExpressions getBoolExpression() {
+    public AbstractSyntaxTree.boolExpression getBoolExpression() {
         return this.boolExpression;
     }
 
@@ -41,15 +37,15 @@ public class whileStatement extends statementInterface {
         return null;
     }
 
-    public lExpressions getlExpression() {
+    public lstExpression getlExpression() {
         return null;
     }
 
-    public aExpressions getaExpression() {
+    public arrExpression getaExpression() {
         return null;
     }
 
-    public aExpressions getaExpression2() {
+    public arrExpression getaExpression2() {
         return null;
     }
 

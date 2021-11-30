@@ -1,11 +1,10 @@
 package Analyses;
 
-import AbstractSyntaxTree.expressions.arrayExpressions.aExpressions;
+import AbstractSyntaxTree.arrExpression;
 import graphConstruction.Edges;
 import graphConstruction.Nodes;
 import graphConstruction.controlFlow;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -15,7 +14,7 @@ public class detectionOfSigns implements Analysis{
     public controlFlow ControlFlowAnalysis;
     public HashMap<Integer,ArrayList<Integer>> infl;
 
-    public ArrayList<String> signed(aExpressions aExpression, ArrayList<String> detectionOfSignsElement){
+    public ArrayList<String> signed(arrExpression aExpression, ArrayList<String> detectionOfSignsElement){
 
     }
 
@@ -37,7 +36,7 @@ public class detectionOfSigns implements Analysis{
             r.add(t);
         }
         else if(e.getTracer().getClass().getName().equals("AbstractSyntaxTree.assignmentStatement")){
-            if(e.getTracer().getLExpression().getClass().getName().equals("AbstractSyntaxTree.expressions.lexpressions.lArrOperator")){
+            if(e.getTracer().getLExpression().getClass().getName().equals("AbstractSyntaxTree.lstArrayExpression")){
                 if(si)
             }
         }

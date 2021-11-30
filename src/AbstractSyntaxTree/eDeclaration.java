@@ -1,8 +1,5 @@
 package AbstractSyntaxTree;
 
-import AbstractSyntaxTree.expressions.arrayExpressions.aExpressions;
-import AbstractSyntaxTree.expressions.lexpressions.lExpressions;
-
 public class eDeclaration extends declarationInterface {
 
 
@@ -12,17 +9,17 @@ public class eDeclaration extends declarationInterface {
     }
 
     @Override
-    public aExpressions getAExpression1() {
+    public arrExpression getAExpression1() {
         return null;
     }
 
     @Override
-    public aExpressions getAExpression2() {
+    public arrExpression getAExpression2() {
         return null;
     }
 
     @Override
-    public lExpressions getLExpression() {
+    public lstExpression getLExpression() {
         return null;
     }
 

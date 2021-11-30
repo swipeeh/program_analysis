@@ -3,7 +3,7 @@ package graphConstruction;
 
 import AbstractSyntaxTree.tracerInterface;
 import AbstractSyntaxTree.declarationInterface;
-import AbstractSyntaxTree.expressions.booleanExpressions.bExpressions;
+import AbstractSyntaxTree.boolExpression;
 import AbstractSyntaxTree.statementInterface;
 public class Edges {
 
@@ -21,7 +21,7 @@ public class Edges {
 
     public Edges(declarationInterface decl, Nodes fNode, Nodes lNode) {}
 
-    public Edges(Nodes fNode, Nodes tNode, bExpressions boolExpression) {}
+    public Edges(Nodes fNode, Nodes tNode, boolExpression boolExpression) {}
 
     public Edges(statementInterface stat, Nodes fNode, Nodes lNode) {}
 

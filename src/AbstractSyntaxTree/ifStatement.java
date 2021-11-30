@@ -1,16 +1,12 @@
 package AbstractSyntaxTree;
 
 
-import AbstractSyntaxTree.expressions.arrayExpressions.aExpressions;
-import AbstractSyntaxTree.expressions.booleanExpressions.bExpressions;
-import AbstractSyntaxTree.expressions.lexpressions.lExpressions;
-
 public class ifStatement extends statementInterface {
 
-    private bExpressions boolExpression;
+    private AbstractSyntaxTree.boolExpression boolExpression;
     private statementInterface statement;
 
-    public ifStatement(bExpressions boolExp, statementInterface sta) {
+    public ifStatement(AbstractSyntaxTree.boolExpression boolExp, statementInterface sta) {
         this.boolExpression = boolExp;
         this.statement = sta;
     }
@@ -22,7 +18,7 @@ public class ifStatement extends statementInterface {
     @Override
     public statementInterface statementTwo() {return this.statement;}
 
-    public bExpressions getBoolExpression() {
+    public AbstractSyntaxTree.boolExpression getBoolExpression() {
         return this.boolExpression;
     }
 
@@ -42,16 +38,16 @@ public class ifStatement extends statementInterface {
     }
 
 
-    public lExpressions getlExpression() {
+    public lstExpression getlExpression() {
         return null;
     }
 
 
-    public aExpressions getaExpression() {
+    public arrExpression getaExpression() {
         return null;
     }
 
-    public aExpressions getaExpression2() {
+    public arrExpression getaExpression2() {
         return null;
     }
 

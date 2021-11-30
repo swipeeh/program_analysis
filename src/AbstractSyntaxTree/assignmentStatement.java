@@ -1,8 +1,5 @@
 package AbstractSyntaxTree;
 
-import AbstractSyntaxTree.expressions.Expressions;
-import AbstractSyntaxTree.expressions.booleanExpressions.bExpressions;
-
 public class assignmentStatement extends statementInterface {
 
         Expressions first;
@@ -24,7 +21,7 @@ public class assignmentStatement extends statementInterface {
     }
 
     @Override
-    public bExpressions getBoolExpression() {
+    public boolExpression getBoolExpression() {
         return null;
     }
 }

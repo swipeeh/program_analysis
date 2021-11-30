@@ -1,9 +1,9 @@
-package AbstractSyntaxTree.expressions.arrayExpressions;
+package AbstractSyntaxTree;
 
-public class aVarOperator extends aExpressions{
+public class arrVarExpression extends arrExpression {
     private String identifier;
 
-    public aVarOperator(String id){
+    public arrVarExpression(String id){
         this.identifier=id;
     }
 

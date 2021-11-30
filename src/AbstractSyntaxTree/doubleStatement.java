@@ -1,9 +1,5 @@
 package AbstractSyntaxTree;
 
-import AbstractSyntaxTree.expressions.arrayExpressions.aExpressions;
-import AbstractSyntaxTree.expressions.booleanExpressions.bExpressions;
-import AbstractSyntaxTree.expressions.lexpressions.lExpressions;
-
 public class doubleStatement extends statementInterface {
 
     private statementInterface statementOne;
@@ -32,7 +28,7 @@ public class doubleStatement extends statementInterface {
         return null;
     }
 
-    public bExpressions getBoolExpression() {
+    public boolExpression getBoolExpression() {
         return null;
     }
 
@@ -40,15 +36,15 @@ public class doubleStatement extends statementInterface {
         return null;
     }
 
-    public lExpressions getlExpression() {
+    public lstExpression getlExpression() {
         return null;
     }
 
-    public aExpressions getaExpression() {
+    public arrExpression getaExpression() {
         return null;
     }
 
-    public aExpressions getaExpression2() {
+    public arrExpression getaExpression2() {
         return null;
     }
 

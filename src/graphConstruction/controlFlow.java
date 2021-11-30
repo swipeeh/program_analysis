@@ -51,7 +51,7 @@ public class controlFlow {
             this.edgesList.add(tEdge);
         } else if (decl.getClass().getName().equals("AbstractSyntaxTree.Declaration.rDeclaration")) {
             this.edgesList.add(tEdge);
-        } else if (decl.getClass().getName().equals("AbstractSyntaxTree.Declaration.arrDeclarationInterface")) {
+        } else if (decl.getClass().getName().equals("AbstractSyntaxTree.Declaration.arrDeclaration")) {
             this.edgesList.add(tEdge);
         } else if (decl.getSecondDec().getClass().equals("AbstractSyntaxTree.Declaration.doubleDeclaration")) {
             this.nodesList.add(tNode);

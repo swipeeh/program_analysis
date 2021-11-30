@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="Structural changes">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30__11__2021_8_49__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30__11__2021_8_49__Changes_.xml" afterDir="false" />
+    <list default="true" id="daefb738-2852-4609-bb0e-10a71e2ca21b" name="Changes" comment="signed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Analyses/detectionOfSigns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyses/detectionOfSigns.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.microc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Input/test.microc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +54,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\patih\Desktop\Personal shit\skola\skola DTU\program analysis\program_analysis\src\AST" />
       <recent name="C:\Users\patih\Desktop\Personal shit\skola\skola DTU\program analysis\program_analysis\src\AST\expressions\aexpressions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\patih\Desktop\Personal shit\skola\skola DTU\program analysis\program_analysis\program_analysis\src\Input" />
     </key>
   </component>
   <component name="RunManager" selected="Application.HardCodedParser">
@@ -188,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637922471278</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="signed">
+      <created>1638264356792</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1638264356792</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +227,7 @@
     <MESSAGE value="reaching definitions (work in progress)" />
     <MESSAGE value="rd errors resolved" />
     <MESSAGE value="Correct placement of classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correct placement of classes" />
+    <MESSAGE value="signed" />
+    <option name="LAST_COMMIT_MESSAGE" value="signed" />
   </component>
 </project>

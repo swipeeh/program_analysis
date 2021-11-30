@@ -15,7 +15,30 @@ public class detectionOfSigns implements Analysis{
     public HashMap<Integer,ArrayList<Integer>> infl;
 
     public ArrayList<String> signed(arrExpression aExpression, ArrayList<String> detectionOfSignsElement){
-
+    ArrayList<String> r = new ArrayList<>();
+        if(aExpression.getClass().equals("AbstractSyntaxTree.arrValExpression")){
+            if(aExpression.getValue()>0){r.add("+");}
+            else if(aExpression.getValue()<0){r.add("-");}
+            else{r.add("0");}
+        }
+        else if(aExpression.getClass().equals("AbstractSyntaxTree.arrVarExpression")){
+            for(ArrayList<String> arrayList : detectionOfSignsElement){
+                if(arrayList.contains(aExpression.getidentifier())){r.add(arrayList.get(1));}}
+        }
+        else if(aExpression.getClass().equals("AbstractSyntaxTree.aArrExpression")){
+            if(signed(aExpression.getAExpression1(),detectionOfSignsElement).contains("-")&& signed(aExpression.getAExpression1(),detectionOfSignsElement).size()==!0){r.clear();}
+        }
+        else if(aExpression.getClass().getName().equals("AbstractSyntaxTreee.arrArithExpression")){
+            if(aExpression.getArOperator().equals("-")){
+                r=msign(signed(aExpression.getAExpression1(),detectionOfSignsElement),signed(aExpression.getAExpression2(),detectionOfSignsElement));}
+            if(aExpression.getArOperator().equals("+")){
+                r=psign(signed(aExpression.getAExpression1(),detectionOfSignsElement),signed(aExpression.getAExpression2(),detectionOfSignsElement));}
+            if(aExpression.getArOperator().equals("/")){
+                r=dsign(signed(aExpression.getAExpression1(),detectionOfSignsElement),signed(aExpression.getAExpression2(),detectionOfSignsElement));}
+            if(aExpression.getArOperator().equals("x")){
+                r=xsign(signed(aExpression.getAExpression1(),detectionOfSignsElement),signed(aExpression.getAExpression2(),detectionOfSignsElement));}
+        }
+    return r;
     }
 
     public ArrayList<ArrayList<String>> changePosition(Edges e, ArrayList<ArrayList<String>> detectionOfSignsElement){
@@ -37,7 +60,7 @@ public class detectionOfSigns implements Analysis{
         }
         else if(e.getTracer().getClass().getName().equals("AbstractSyntaxTree.assignmentStatement")){
             if(e.getTracer().getLExpression().getClass().getName().equals("AbstractSyntaxTree.lstArrayExpression")){
-                if(si)
+                if(signed())
             }
         }
         return r;
@@ -97,4 +120,13 @@ public class detectionOfSigns implements Analysis{
     public controlFlow getControlFlowAnalysis() {return this.getControlFlowAnalysis();}
     @Override
     public HashMap<Integer, ArrayList<Integer>> getInfl() {return this.infl;}
+
+    public ArrayList<String> psign(ArrayList<String> fst, ArrayList<String> snd){
+        ArrayList<String> r = new ArrayList<>();r.add("+");return r;}
+    public ArrayList<String> msign(ArrayList<String> fst, ArrayList<String> snd){
+        ArrayList<String> r = new ArrayList<>();r.add("-");return r;}
+    public ArrayList<String> xsign(ArrayList<String> fst, ArrayList<String> snd){
+        ArrayList<String> r = new ArrayList<>();r.add("x");return r;}
+    public ArrayList<String> dsign(ArrayList<String> fst, ArrayList<String> snd){
+        ArrayList<String> r = new ArrayList<>();r.add("/");return r;}
 }

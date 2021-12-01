@@ -14,6 +14,11 @@ public class detectionOfSigns implements Analysis{
     public controlFlow ControlFlowAnalysis;
     public HashMap<Integer,ArrayList<Integer>> infl;
 
+    public detectionOfSigns( controlFlow controlFlowAnalysis){
+        this.ControlFlowAnalysis =ControlFlowAnalysis;
+        initialize();
+    }
+
     public ArrayList<String> signed(arrExpression aExpression, ArrayList<String> detectionOfSignsElement){
     ArrayList<String> r = new ArrayList<>();
         if(aExpression.getClass().equals("AbstractSyntaxTree.arrValExpression")){
@@ -22,8 +27,8 @@ public class detectionOfSigns implements Analysis{
             else{r.add("0");}
         }
         else if(aExpression.getClass().equals("AbstractSyntaxTree.arrVarExpression")){
-            for(ArrayList<String> arrayList : detectionOfSignsElement){
-                if(arrayList.contains(aExpression.getidentifier())){r.add(arrayList.get(1));}}
+            for(String arrayList : detectionOfSignsElement){
+                if(arrayList.contains(aExpression.getidentifier())){r.add(arrayList);}}
         }
         else if(aExpression.getClass().equals("AbstractSyntaxTree.aArrExpression")){
             if(signed(aExpression.getAExpression1(),detectionOfSignsElement).contains("-")&& signed(aExpression.getAExpression1(),detectionOfSignsElement).size()==!0){r.clear();}
@@ -66,10 +71,6 @@ public class detectionOfSigns implements Analysis{
         return r;
     }
 
-    public detectionOfSigns( controlFlow controlFlowAnalysis){
-        this.ControlFlowAnalysis =ControlFlowAnalysis;
-        initialize();
-    }
     //This method is being used to create all necessary lists and variables which will be used in new analysis set.
     public void initialize(){
         this.analysisSet = new HashMap<>();
@@ -110,7 +111,7 @@ public class detectionOfSigns implements Analysis{
                 if(l == e.getEndNode().getId()){
                     //arrayList needs to be initialized differently
                     ArrayList<String> t = new ArrayList<>();
-                    for(ArrayList<String> arrayList : t){
+                    for(String arrayList : t){
                         if(!r.contains(arrayList)){
                             r.add(arrayList);}}}}}
         return r;
